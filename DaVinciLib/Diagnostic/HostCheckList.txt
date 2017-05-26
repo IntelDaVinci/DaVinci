@@ -1,0 +1,8 @@
+Number, Command, Command Arguments, Keywords
+1, java, -version, version
+2, ping, 127.0.0.1 -n 3, Reply
+3, netstat, -a -O | findstr 127.0.0.1, 127.0.0.1 
+4, netstat, -a -o |findstr 5037 |findstr LISTENING, LISTENING
+5, tasklist, | findstr wininit.exe, wininit.exe
+6, taskkill, /?, TASKKILL
+7, wmic, bootconfig, BootDirectory

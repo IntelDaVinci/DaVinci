@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<DaVinci>
+<Category type="InputMethodApps">
+	<AppName value="com.qisiemoji.inputmethod"/>
+	<AppName value="com.nuance.flext9.input"/>
+	<AppName value="com.moo.android.inputmethod.latin.free"/>
+	<AppName value="com.google.android.inputmethod.latin"/>
+	<AppName value="com.google.android.inputmethod.pinyin"/>
+	<AppName value="com.qisi.inputmethod"/>
+	<AppName value="inputmethod.latin.perfectkeyboard"/>
+	<AppName value="com.sohu.inputmethod.sogoupad"/>
+	<AppName value="com.cootek.smartinputv5"/>
+	<AppName value="com.cootek.smartinputv5.pad"/>
+	<AppName value="com.jinshou.jsinputmethod"/>
+	<AppName value="com.sohu.inputmethod.sogou"/>
+	<AppName value="com.baidu.input"/>
+	<AppName value="com.baidu.padinput"/>
+	<AppName value="com.iflytek.inputmethod"/>
+	<AppName value="com.iflytek.inputmethod.pad"/>
+	<AppName value="com.barleymobile.emojikeyboard"/>
+	<AppName value="emoji.keyboard.emoticonkeyboard"/>
+	<AppName value="com.emoji.coolkeyboard"/>
+	<AppName value="com.jb.emoji.gokeyboard"/>
+</Category>
+<Category type="LauncherApps">
+	<AppName value="com.spb.shell3d"/>
+	<AppName value="com.qihoo360.launcher"/>
+	<AppName value="org.adwfreak.launcher"/>
+	<AppName value="com.anddoes.launcher.pro"/>
+	<AppName value="com.apusapps.launcher"/>
+	<AppName value="net.zhuoweizhang.mcpelauncher.pro"/>
+	<AppName value="com.gau.go.launcherex"/>
+	<AppName value="com.gau.go.launcherex.gowidget.gopowermaster"/>
+	<AppName value="com.gau.go.launcherex.gowidget.weatherwidget"/>
+	<AppName value="com.gau.go.launcherex.key"/>
+	<AppName value="com.google.android.launcher"/>
+	<AppName value="info.tikusoft.launcher7"/>
+	<AppName value="com.moxiu.launcher"/>
+	<AppName value="com.gtp.nextlauncher"/>
+	<AppName value="com.teslacoilsw.launcher"/>
+	<AppName value="com.teslacoilsw.launcher.prime"/>
+	<AppName value="home.solo.launcher.free"/>
+	<AppName value="com.zeroteam.zerolauncher"/>
+	<AppName value="net.qihoo.launcher.theme.ptaiqingshu"/>
+	<AppName value="com.android.launcher"/>
+	<AppName value="com.asus.launcher"/>
+	<AppName value="com.miui.home"/>
+	<AppName value="com.hola.launcher"/>
+    <AppName value="com.tencent.qlauncher"/>
+    <AppName value="com.tencent.qlauncher.lite"/>
+    <AppName value="com.tencent.qqlauncher"/>
+    <AppName value="telecom.mdesk"/>
+	<AppName value="net.suckga.iLauncher2"/>
+</Category>
+<Category type="LoadingIssueApps">
+	<AppName value="com.tencent.tmgp.ttlz"/>
+	<AppName value="com.zynga.slots.free"/>
+	<AppName value="com.bradygames.borderlandsthepresequel"/>
+	<AppName value="com.purplekiwii.mb"/>
+	<AppName value="com.blacklandgames.pg"/>
+	<AppName value="com.blacklandgames.pghack"/>
+	<AppName value="com.crescentmoongames.ravensword2"/>
+	<AppName value="com.starshipstudio.thesurvivor"/>
+    <AppName value="br.com.beholdstudios.knightspp"/>
+	<AppName value="com.icbc.im"/>
+</Category>
+<Category type="SkipApps">
+	<AppName value="com.google.android.inputmethod.latin"/>
+	<AppName value="com.google.android.gms"/>
+	<AppName value="com.google.android.gsf.login"/>
+	<AppName value="com.tencent.mobileqq"/>
+	<AppName value="com.tencent.mm"/>
+	<AppName value="com.facebook.katana"/>
+	<AppName value="com.example.qagent"/>
+	<AppName value="com.android.chrome"/>
+	<AppName value="android"/>
+</Category>
+<Category type="AccountClearApps">
+	<AppName value="com.facebook.katana"/>
+    <AppName value="com.twitter.android"/>
+	<AppName value="com.tmall.wireless"/>
+</Category>
+<Category type="SwipeAfterLoginApps">
+	<AppName value="com.alibaba.mobileim"/>
+</Category>
+<Category type="ShowKeyboardIssueApps">
+	<AppName value="com.ninja.yyw.renzhe.baidu"/>
+</Category>
+<Category type="CloseWIFIApps">
+	<AppName value="com.king.candycrushsodasaga"/>
+	<AppName value="com.sec.android.easyMover"/>
+	<AppName value="com.lenovo.anyshare.gps"/>
+	<AppName value="com.antivirus"/>
+	<AppName value="cn.xender"/>
+</Category>
+<Category type="ModifyFontApps">
+	<AppName value="com.turboc.cleaner"/>
+</Category>
+
+<Category type="SpecialActivityName">
+	<AppName value="com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity"/>
+	<AppName value="com.google.android.apps.photos/com.google.android.apps.photos.home.HomeActivity"/>
+</Category>
+<Category type="ARCModelName">
+	<AppName value="cheets"/>
+	<AppName value="cyan"/>
+	<AppName value="Google Chromebook Pixel (2015)"/>
+	<AppName value="Acer Chromebook R11"/>
+</Category>
+<Category type="SpecialInstallApps">
+	<AppName value=""/>
+</Category>
+</DaVinci>
+

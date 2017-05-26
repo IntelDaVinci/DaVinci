@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="DaVinciConfig">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="useGpuAcceleration" default="false" minOccurs="0"
+                    type="xs:boolean"/>
+                <xs:element name="audioRecordDevice" default="Diabled" minOccurs="0"
+                    type="xs:string"/>
+                <xs:element default="Disabled" minOccurs="0" name="audioPlayDevice" type="xs:string"/>
+                <xs:element name="AndroidDevices">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="AndroidTargetDevice">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:group ref="TargetDevice"/>
+                                        <xs:element default="Unknown" minOccurs="0"
+                                            name="deviceModel" type="xs:string"/>
+                                        <xs:element default="31600" minOccurs="0" name="qagentPort"
+                                            type="xs:int"/>
+                                        <xs:element default="31500" minOccurs="0" name="magentPort"
+                                            type="xs:int"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="WindowsDevices">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="WindowsTargetDevice">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:group ref="TargetDevice"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ChromeDevices">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0"
+                                name="ChromeTargetDevice">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:group ref="TargetDevice"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="TargetDevice">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element default="false" minOccurs="0" name="identifiedByIp" type="xs:boolean"/>
+            <xs:element default="Disabled" minOccurs="0" name="audioRecordDevice" type="xs:string"/>
+            <xs:element default="Disabled" minOccurs="0" name="audioPlayDevice" type="xs:string"/>
+            <xs:element default="false" minOccurs="0" name="multiTouchSupported" type="xs:boolean"/>
+            <xs:element default="0" minOccurs="0" name="height" type="xs:int"/>
+            <xs:element default="0" minOccurs="0" name="width" type="xs:int"/>
+            <xs:element default="Undefined" minOccurs="0" name="screenSource" type="xs:string"/>
+            <xs:element minOccurs="0" name="calibrationData" type="xs:string"/>
+            <xs:element minOccurs="0" name="cameraSetting" type="xs:string"/>
+            <xs:element minOccurs="0" name="hwAccessoryController" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

@@ -1,0 +1,11 @@
+Number, Command, Command Arguments, Keywords
+1, adb, devices, List of devices attached
+2, adb, get-state, device
+3, adb, shell df /data, Filesystem
+4, adb, shell dumpsys display, Display
+5, adb, shell dumpsys activity top, TASK
+6, adb, shell ps, init
+7, adb, shell getprop, ro.product.cpu.abi
+8, adb, shell pm list packages, package
+9, adb, shell ps, monkey
+10, adb, usb, USB

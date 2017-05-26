@@ -1,0 +1,355 @@
+﻿<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<DaVinci>
+<Category type="Common">
+<KeywordList>
+	<Keyword type="EnWhiteList" class="POSITIVE" value="(\bcontinue\b)|(^ok$)|(^okay.*?)|(\b(y|v)es\b)|(\baccept\b)|(\binstall\b)|(\bopen\b)|(\bretry\b)|(\bproceed\b)|(\bstart\b)|(^n(\s)?ext$)|(\bdone\b)|(^pla)|(lay)|(\bgo ahead\b)|(^tweet$)|(^twitter$)|(^facebook$)"/>
+	<Keyword type="EnWhiteList" class="NEGATIVE" value="(\bno\b)|(\bcancel\b)|(\bclose\b)|(\blater\b)|(^next time$)|(^not now$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnNegativePriorList" value="(update)|(latest version)|(new version)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBlackList" value="(^not login$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhWhiteList" class="POSITIVE" value="(^允许$)|(下一步)|(^(石角|确|礁).*?)|(.*?(定|认)$)|(^.(\s)?受$)|(^同(\s)?.$)|(^闷蕊$)|(^好$)|(^是$)|(^.?知(道|遵)了$)|(^继续$)|(^立(\s)?(即|目))|(即刻体验)|(开(\s)?(始|启))|((进|迸)(\s)?入)|(^单机游戏$)|(^.?入游戏$)|(^加入花田$)|(^跟我来)|(^应(\s)?用$)|(^点击.*?我的口语$)|(^我的$)|(^领(\s)?取$)|(^完成$)|(^我已完成$)|(^允许$)|(推荐(给|绐)朋友)|(新(浪|衰)微(博|攫))|(^tweet$)|(^twitter$)|(^facebook$)|(^微信$)|(^朋友圈$)|(^附近$)|(^机场详情$)|(^请选择学校$)|(^获取附近学校$)|(^我的彩票$)|(^股票开户$)|(^玩乐$)|(^新版本检测$)"/>
+	<Keyword type="ZhWhiteList" class="NEGATIVE" value="(^取.*?)|(^否$)|(关(\s)?闭)|(^(以|稍)(\s)?后)|(^暂(\s)?不)|(^跳过此页$)|(再(\s)?说)|(下(\s)?次)|(.*?提示$)|(^拒绝$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhNegativePriorList" value="((更|重)(新|靳))|(升级)|(安装)|(提示)"/>
+</KeywordList>
+<KeywordList>
+    <Keyword type="ZhBlackList" class="POSITIVE" value="(同人)|(同慧)"/>
+	<Keyword type="ZhBlackList" class="NEGATIVE" value="(暂不登录)"/>
+</KeywordList>
+</Category>
+<Category type="NetworkIssue">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(connect)|(\bcoiiiiectioii\b)|(c0nnecu0n)|(\bserver\b)|(network)|(\binternet\b)|(\bwi(-)?fi\b)|(\bwebpage\b)|(\betherweb\b)|(\breconnect\b)|(\bdownload\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBehaviorWhiteList" priority="HIGH" value="(\bfa(x|i|f)(l|I)ed\b)|(\blost\b)|(^no$)|(\bno (internet|network|connection)\b)|(^not$)|(\bnot (available|connected)\b)|(\berror\b)|((can|could)(\s)?not)|(require)|(\bcheck\b)|(\bunable\b)|(\bunavailable\b)|(make sure)|(need)|(error)|(missing)"/>
+	<Keyword type="EnBehaviorWhiteList" priority="LOW" value="(t(r|f)y again)|(\bret(r|f)y\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBlackList" value="(doesn.t require a network)|(file(s)? require(s)? internet access)|(need(s)? to connect)|(account requires)|(extra download require)|(.*?have both GPS and Internet.*?)|(check netwo(r|l)k t(r|l)af(fi|ﬁ)c)|(.*?sd card.*?)|(.*?when wi-fi is unavailable.*?)|(.*?license agreement.*?)|(launch the download)|(downloading data)|(no need to download)|(download addi(i|t)ional data)|(connect with friends)|(download on google play)|(create profile)|(location information)|(introducing connect)|(check the team)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(连.*?)|(网(络|绢|绛|绦|缅|页|路))|(联网)|(通讯)|(醛网)|((加|下)载)|(更(新|亲斤)失败)|(辋路)|(associated with hostname)|(c0nnecu0n)|(服务器列表)|(数(据|掘)获取)|(服务繁忙)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBehaviorWhiteList" value="(失)(败|贼|贱|肌)|(不可)(用|甩)|(超)(时|盹)|(重试)|((措|错)(漓|误|蕊))|(尝试)|((检|榆)(查|娜))|(断开)|(不.*?(给|绐)(力|九|刀))|(请设置)|(异(常|氟|棠|锻|蔻)|(((无法)|(没有)|(未)|(耒))连((接)|(镜)|(提)))|(未打开网络)|(no address)|(faﬂed)|(重新加载)|(找不到)|(未检测到)|(开小差)|(没有.*?网络)|(联网后再进入)|(无网)|((有|出|出了)问题)|(不稳(定|甩))|(稍后再试)|(不存在)|(不佳)|((已|巳)关闭)|((连|连接)不.*?))|(网页无法打开)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBlackList" value="(不需要连接网络)|(去医院检查)|(^允许$)|(初始化成功)|(如(杲|果)不能正常联网)|((是否现在|立即|检查到新版本)(更|吏)(新|韧|瓢|阮)|(企业没有自己的网络资源)|(下载的视频无法播))|(网络无法刷新问(题|舰))|(无网络也能)|(正在等待电脑连接)|(初始化失败)|(正(在|茌)检查版本)|(正在加载)|(注册帮助)|(热门问题)|(免费上网)|(盒子下载)|(连.*?都无法拒绝)|(流量监控已开启)|(连接后进行安全检查)|((立刻|暂不)升级)|(马上更新)"/>
+</KeywordList>
+</Category>
+<Category type="ANR">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(\bresp.*?n.*?ng\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBehaviorWhiteList" value="(\bisn\b)|(\bclose\b)|(\bwant\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnOKWhiteList" value="(\bok\b)|(\bclose\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(无响应)|(\bresp.*?n.*?ng\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBehaviorWhiteList" value="(关闭)|(\bisn\b)|(\bclose\b)|(\bwant\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhOKWhiteList" value="(确定)|(\bclose\b)"/>
+</KeywordList>
+</Category>
+<Category type="CrashDialog">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(\bhas\b)|(\bkeeps\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBehaviorWhiteList" value="(\bunfortunately\b)|(\bs(to|m|l)pped\b)|(\bstopping\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnOKWhiteList" value="(\bok\b)|(\bclose\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(运(行|侃))|(停止)|(\bhas\b)|(\bkeeps\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBehaviorWhiteList" value="(抱歉)|(unfortunately.*?)|(\bs(t|l|1)opped\b)|(\bstopping\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhOKWhiteList" value="(确定)|(\bok\b)|(\bclose\b)"/>
+</KeywordList>
+</Category>
+<Category type="ErrorDialog">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(\bproblem\b)|(\berror\b)|(fail)|((can|could)(\s)?no(t|i))|(issue)|(not authorized)|(try again)|(unable)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBehaviorWhiteList" value="(\bre-install\b)|(\breinstall\b)|(\bhas occurred\b)|(no..veriﬁed)|(validation)|(recharge)|(locate)|(location)|(json data format)|(\berror\b)|(not authorized)|(try again)|(load video)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBlackList" value="(\bfeedback\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(发生问题)|(失(眈|败))|(错误)|(无法)|(木有办法)|(解码库)|(没通过验证)|(不支持)|(不可播)|(重试)|(程序崩溃)|(出错)|(浏览器无法打(开|汛))|(请打开定位服务)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBehaviorWhiteList" value="(重新安装)|(充值)|(定位)|(位(置|薹))|(json数据格式)|(检测)|(发生问题)|(失败)|(错误)|(没通过验证)|(设备)|(视频)|(重试)|(升级)|(程序崩溃)|(出错)|(浏览器无法打(开|汛))|(请打开定位服务)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBlackList" value="(错误反馈)|(错误上报)|(立(即|刻)更新)|(认同并接受)|(视频教程)|(系统检测)|(省时放心)|(需要.*?权限)|(可以报告当前错误)|(星很失败)|(版本说(明|胴))|(手机号不能为空)|(欢迎使用)|(游戏规则)|(错误答(案|菊))|(错题练习)|(协议)|(常见问题)|(请安装.*?后重试)"/>
+</KeywordList>
+</Category>
+<Category type="LocationIssue">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(current location)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBehaviorWhiteList" value="(Shanghai)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBlackList" value="(do you want to choose)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(当前定位位置)|(当前城市)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBehaviorWhiteList" value="(上海|上诲)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBlackList" value="(当前城市与定位城市不一样)"/>
+</KeywordList>
+</Category>
+<Category type="InitializationIssue">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(\binitialization\b)|(\binitialize\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBehaviorWhiteList" value="(\bfai(l|I)ed\b)|(\blost\b)|(\bno(?!\sevidence)\b)|(\berror\b)|(can(\s)?not)|(try again)|(require)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(初始化)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBehaviorWhiteList" value="(失败)|(失贱)"/>
+</KeywordList>
+</Category>
+<Category type="AbnormalFont">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(.*?口口口.*?)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(.*?口口口.*?)"/>
+</KeywordList>
+</Category>
+<Category type="ProcessExit">
+<KeywordList>
+	<Keyword type="EnDependentWhiteList" value="(\bexit\b)|(\bquit\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnOKWhiteList" value="(.*?es)|(ok)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnIndependentWhiteList" value="(\bexit\b)|(\bquit\b)|(\bfinish\b)|(\bdecline\b)|(\bca(nc|m|k)el\b)|(Don.*?agree)|(disagree)|(deny)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhDependentWhiteList" value="(退出)|(结束)|(重启后生效)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhOKWhiteList" value="(确定)|(是)|(罐定)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhIndependentWhiteList" value="(退.*?出)|(结束)|(完成)|(拒绝)|(取(消|萌|啸))|(游)|(蛆)|(暹出)|(醐肖)|(^否$)|(关闭)|(设置壁纸)|(不接受)|(返回)|(exit)|(deny)"/>
+</KeywordList>
+</Category>
+<Category type="InstallConfirm">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(\bcontinue\b)|(\bnext\b)|(\bok\b)|(\binstall\b)|(\baccept\b)|(\bcon(fi|ﬁ)rm\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnPriorList" value="(\bunderstand\b)|(\binstall.an.wa.\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(继续)|(接受)|(下一步)|(^安)|(^完)|(^(石角|确).$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhPriorList" value="(理解)"/>
+</KeywordList>
+</Category>
+<Category type="SmartLogin">
+<KeywordList>
+	<Keyword type="EnAccountWhiteList" value="(.*?se.*?ame)|(name)|((i|v)d)|(e.?ma(i|n))|(acc.u.*?([^?7]$))|(.*?com.*?)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnPasswordWhiteList" value="(ass(\s)?w..d[^?7]*$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnNextWhiteList" value="(^n(\s)?ext$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnLoginButtonForLoginPageWhiteList" value="(^log(\s)?in$)|(^sign(\s)?in$)|(continue)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnLoginButtonAccurateKeyword" value="(^log in$)|(^sign in$)|(.*?log in with facebook$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnLoginButtonWhiteList" priority="HIGH" value="(name$)|(^existing$)|(^google$)|(^fac(e|c)book$)|(outlook$)|(^add account$)"/>
+	<Keyword type="EnLoginButtonWhiteList" priority="MEDIUM" value="(log in (with|via).*?([^phone number]$))|(sign in (with|via).*?([^phone number]$))"/>
+	<Keyword type="EnLoginButtonWhiteList" priority="LOW" value="(log(\s)?in)|(sign(\s)?in)|(already)|(^log$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnApkWhiteList" value="(log(\s)?in)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBlackList" value="(sign(\s)?up)|(register)|(create)|(forgot)|(forgotten)|(remember)|(don't have)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhAccountWhiteList" value="(账|帐)|(贝长(号|户))|(用户(名|音))|(通行证)|(邮)|(箱)|(QQ号)|(皿号)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhPasswordWhiteList" value="((密|图)[^?7]*$)|([^号](码|杩)[^?7]*$)|(^(码|杩).$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhNextWhiteList" value="(^下一步$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhLoginButtonForLoginPageWhiteList" value="(^.(录|陆)$)|(^授权并(登|壹)(录|陆)$)|(^.定$)|(^(开始|进入)游戏$)|(^蓼冢$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhLoginButtonAccurateKeyword" value="(^登录$)|(^登陆$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhLoginButtonWhiteList" priority="HIGH" value="(QQ.*?(录|陆))|(皿.*?(录|陆))|(^.(登|壹)(录|陆))|(QQ.*?友玩)|(培OO.右.*?)|(皿.*?友玩)|((与|和).好友玩)|(淘宝账户)|(Skype用户)|(^群冢$)"/>
+	<Keyword type="ZhLoginButtonWhiteList" priority="MEDIUM" value="(微信.*?(录|陆))|(微信好友玩)"/>
+	<Keyword type="ZhLoginButtonWhiteList" priority="LOW" value="((与|和).*?玩)|(^.(他|它)..方式$)|(用|账|帐)(号|户)|((登|壹).$)|((录|陆)$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhApkWhiteList" value="((登|壹)(录|陆))|(.*?微.*?)|(.*?博.*?)|(.*?账.*?)|(.*?帐.*?)|(.*?号.*?)|(.*?户.*?)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhBlackList" value="(注册)|(创建)|(忘记)|(记住)|(找回)"/>
+</KeywordList>
+</Category>
+<Category type="LoginFail">
+<KeywordList>
+	<Keyword type="EnLoginFailWhiteList" value="(invalid)|(fail)|(incorrect)|(try again)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhLoginFailWhiteList" value="(无效)|(失败)|(错误)|(重试)"/>
+</KeywordList>
+</Category>
+<Category type="GoogleFrameworkIssue">
+<KeywordList>
+	<Keyword type="EnGoogleFrameworkWhiteList" value="(google play services)|(documents)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhGoogleFrameworkWhiteList" value="(服务)|(documents)"/>
+</KeywordList>
+</Category>
+<Category type="Download">
+<KeywordList>
+	<Keyword type="EnFreeAppCandidateWhiteList" value="(\bfree\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnPaidAppCandidateWhiteList" value="(^(\$)(\d)+(\.\d+)?$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnPlayCandidateWhiteList" value="(\bp..y\b)|(\bmay\b)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnAlwaysWhiteList" value="(ways$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnIncompatibleWhiteList" value="(.*?sn.t available)|(.*?available.*?country)|(.*?with th.. version)|(.*?ble w.th th.s)|(isn.t compatible)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnPriceWhiteList" value="((?!u)^.*?n.*?stall$)|(^update$)|(^(\$)(\d)+(\.\d+)?$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnAcceptWhiteList" value="(^acc..t$)|(^a..ept$)|(^acc.e.pt$)|(^a.ce..$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnBuyWhiteList" value="(^buy$)|(^buv$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnCompleteWhiteList" value="(^downloading)"/>
+</KeywordList>
+<KeywordList>
+    <Keyword type="EnRandomWhiteList" priority="HIGH" value="(\bskip\b)"/>
+    <Keyword type="EnRandomWhiteList" priority="MEDIUM" value="(^proceed$)|(\bretry\b)|(^ok$)|(^dk$)"/>
+	<Keyword type="EnRandomWhiteList" priority="LOW" value="(\bcontinue\b)|(\bcdnhnue\b)"/>
+</KeywordList>
+</Category>
+<Category type="License">
+<KeywordList>
+	<Keyword type="EnPositiveWhiteList" value="(\baccept\b)|(\bagree\b)|(^ok$)|(\btrust\b)|(^allow$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnCheckBoxWhiteList" value="(read and agree)|(privacy)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhPositiveWhiteList" value="(^.(\s)?受$)|(^同意$)|(^同思$)|(^门盲$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhCheckBoxWhiteList" value="(阅读)"/>
+</KeywordList>
+</Category>
+<Category type="RnR">
+<KeywordList>
+	<Keyword type="EnWhiteList" class="POSITIVE" value="(^ok$)|(^okay$)|(^(y|v)es$)|(\ba(ll|ii)ow$)|(^agree$)|(^grant$)"/>
+	<Keyword type="EnWhiteList" class="NEGATIVE" value="(^no$)|(^cancel$)|(^n.. n(o|u)w$)|(^den.*?)|(\blater\b)|(^next time$)|(^(not|N at) now$)"/>
+</KeywordList>
+<KeywordList>
+    <Keyword type="EnCheckBoxList" class="POSITIVE" value="(.*?show again)|(.*?show next time)|(.*?access.*?)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="EnNegativePriorList" value="(update)|(latest version)|(new version)|(.*?close.*?)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhWhiteList" class="POSITIVE" value="(^允许$)|(下一步)|(^(石角|确|礁).*?)|(.*?(定|认)$)|(^好$)|(^是$)|(^.(\s)?受$)|(^同意$)|(^接受$)|(^重试.*?)|(^开启$)|(^授权$)|(.*?知道了$)|(.*?再治治$)"/>
+	<Keyword type="ZhWhiteList" class="NEGATIVE" value="(^取.*?)|(^否$)|(^(以|稍)(\s)?后)|(^暂(\s)?不)|(^拒绝$)|(^柜绝$)|(.*?错过$)|(.*?稍后$)|(.*?不想.*?)|(.*?下次.*?)|(.*?再说$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhCheckBoxList" class="POSITIVE" value="(.*?不显示)|(.*?记住)|(.*?使用)|(.*?不再)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhNegativePriorList" value="((更|重)(新|靳))|(升级)|(.*?结束.*?)|(安装)|(提示)|(快捷方式)|(下载)"/>
+</KeywordList>
+</Category>
+<Category type="LauncherApp">
+<KeywordList>
+	<Keyword type="EnWhiteList" value="(^alwa)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhWhiteList" value="(总(\s)?是)|(^始(\s)?.$)"/>
+</KeywordList>
+</Category>
+<Category type="ShareIssue">
+<KeywordList>
+	<Keyword type="EnWhiteList" value="(^tweet$)|(^twitter$)|(^facebook$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhWhiteList" value="(^tweet$)|(^twitter$)|(^facebook$)|(^微信$)|(^朋友圈$)|(^获取附近学校$)|(^新版本检测$)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="IDInfoWhiteList" value="(login.*?alipay)|(login.*?sina)|(login.*?qq)|(login.*?wechat)|(login.*?tencent)|(login.*?weixin)|(login.*?wx)|(login.*?weibo)|(alipay.*?login)|(sina.*?login)|(qq.*?login)|(wechat.*?login)|(tencent.*?login)|(weixin.*?login)|(wx.*?login)|(weibo.*?login)|(login_text)|(login_image)|(sina_weibo)|(wx_friend)|(qq_friend)|(qq_zone)|(tencent_weibo)|(qzoneBtn)|(main_btn_gift)|(tourist_con)"/>
+</KeywordList>
+</Category>
+<Category type="CommonIDInfo">
+<KeywordList>
+	<Keyword type="IDWhiteList" value="(local_btn)|(location)|(share)|(alc_menu_add)|(login.*?alipay)|(login.*?sina)|(login.*?qq)|(login.*?wechat)|(login.*?tencent)|(login.*?weixin)|(login.*?wx)|(login.*?weibo)|(alipay.*?login)|(sina.*?login)|(qq.*?login)|(wechat.*?login)|(tencent.*?login)|(weixin.*?login)|(wx.*?login)|(weibo.*?login)|(login_text)|(login_image)|(sina_weibo)|(wx_friend)|(qq_friend)|(qq_zone)|(tencent_weibo)|(qzoneBtn)|(main_btn_gift)|(tourist_con)"/>
+</KeywordList>
+</Category>
+<Category type="PopupWindow">
+<KeywordList>
+	<Keyword type="EnObjectWhiteList" value="(allow)"/>
+</KeywordList>
+<KeywordList>
+	<Keyword type="ZhObjectWhiteList" value="(允许)|(allow)"/>
+</KeywordList>
+</Category>
+</DaVinci>

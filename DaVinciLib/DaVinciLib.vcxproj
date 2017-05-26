@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Static_Debug|x64">
+      <Configuration>Static_Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Static_Release|x64">
+      <Configuration>Static_Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DaVinciAPI.h" />
+    <ClInclude Include="DaVinciCommon.hpp" />
+    <ClInclude Include="DaVinciConfig.h">
+      <DependentUpon>DaVinciConfig.xsd</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="DaVinciDefs.h" />
+    <ClInclude Include="DaVinciDefs.hpp" />
+    <ClInclude Include="DaVinciStatus.hpp" />
+    <ClInclude Include="Demo\DeviceCrashDetectTest.hpp" />
+    <ClInclude Include="Demo\FfrdLifterTest.hpp" />
+    <ClInclude Include="Demo\FfrdTiltingTest.hpp" />
+    <ClInclude Include="Demo\MapPowerPusher.hpp" />
+    <ClInclude Include="Demo\TempleRunPlayBase.hpp" />
+    <ClInclude Include="Demo\TempleRunSVMPlay.hpp" />
+    <ClInclude Include="Demo\UsbPlugTest.hpp" />
+    <ClInclude Include="DeviceControl\AndroidTargetDevice.hpp" />
+    <ClInclude Include="DeviceControl\AudioFile.hpp" />
+    <ClInclude Include="DeviceControl\AudioManager.hpp" />
+    <ClInclude Include="DeviceControl\AudioPipe.hpp" />
+    <ClInclude Include="DeviceControl\AudioPlayer.hpp" />
+    <ClInclude Include="DeviceControl\CameraCalibrate.hpp" />
+    <ClInclude Include="DeviceControl\CaptureDevice.hpp" />
+    <ClInclude Include="DeviceControl\DeviceControlCommon.hpp" />
+    <ClInclude Include="DeviceControl\DeviceManager.hpp" />
+    <ClInclude Include="DeviceControl\GlobalDeviceStatus.hpp" />
+    <ClInclude Include="DeviceControl\HWAccessoryController.hpp" />
+    <ClInclude Include="DeviceControl\HyperSoftCamCapture.hpp" />
+    <ClInclude Include="DeviceControl\License.hpp" />
+    <ClInclude Include="DeviceControl\PhysicalCameraCapture.hpp" />
+    <ClInclude Include="DeviceControl\PseudoCameraCapture.hpp" />
+    <ClInclude Include="DeviceControl\TargetDevice.hpp" />
+    <ClInclude Include="Diagnostic\Diagnostic.hpp" />
+    <ClInclude Include="Diagnostic\GetDeviceInfo.hpp" />
+    <ClInclude Include="Diagnostic\GetHostInfo.hpp" />
+    <ClInclude Include="Diagnostic\HealthyChecker.hpp" />
+    <ClInclude Include="Exploratory\AndroidBarRecognizer.hpp" />
+    <ClInclude Include="Exploratory\AppUtil.hpp" />
+    <ClInclude Include="Exploratory\BaseObjectCategory.hpp" />
+    <ClInclude Include="Exploratory\BiasFileReader.hpp" />
+    <ClInclude Include="Exploratory\BiasObject.hpp" />
+    <ClInclude Include="Exploratory\BugTriage.hpp" />
+    <ClInclude Include="Exploratory\CommonKeywordRecognizer.hpp" />
+    <ClInclude Include="Exploratory\EventDispatcher.hpp" />
+    <ClInclude Include="Exploratory\EventType.hpp" />
+    <ClInclude Include="Exploratory\FailureType.hpp" />
+    <ClInclude Include="Exploratory\KeyboardRec.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandler.hpp" />
+    <ClInclude Include="Exploratory\CoverageCollector.hpp" />
+    <ClInclude Include="Exploratory\CrossRecognizer.hpp" />
+    <ClInclude Include="Exploratory\DownloadAppRecognizer.hpp" />
+    <ClInclude Include="Exploratory\ExploratoryEngine.hpp" />
+    <ClInclude Include="Exploratory\InputMethodRecognizer.hpp" />
+    <ClInclude Include="Exploratory\KeyboardRecognizer.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForAbnormalFont.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForCrashANR.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForErrorDialog.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForInitializationIssue.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForLocationIssue.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForNetworkIssue.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForPopupWindow.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForProcessExit.hpp" />
+    <ClInclude Include="Exploratory\KeywordConfigReader.hpp" />
+    <ClInclude Include="Exploratory\KeywordRecognizer.hpp" />
+    <ClInclude Include="Exploratory\KeywordUtil.hpp" />
+    <ClInclude Include="Exploratory\LauncherAppRecognizer.hpp" />
+    <ClInclude Include="Exploratory\InstallConfirmRecognizer.hpp" />
+    <ClInclude Include="Exploratory\LicenseRecognizer.hpp" />
+    <ClInclude Include="Exploratory\LoginRecognizer.hpp" />
+    <ClInclude Include="Exploratory\MainTest.hpp" />
+    <ClInclude Include="Exploratory\MainTestCommon.hpp" />
+    <ClInclude Include="Exploratory\MainTestReport.hpp" />
+    <ClInclude Include="Exploratory\ObjectLabel.hpp" />
+    <ClInclude Include="Exploratory\ObjectLabelDispatcher.hpp" />
+    <ClInclude Include="Exploratory\ObjectRecognizer.hpp" />
+    <ClInclude Include="Exploratory\ObjectUtil.hpp" />
+    <ClInclude Include="Exploratory\RnRKeywordRecognizer.hpp" />
+    <ClInclude Include="Exploratory\SeedRandom.hpp" />
+    <ClInclude Include="Exploratory\SerializationUtil.hpp" />
+    <ClInclude Include="Exploratory\SharingKeywordRecognizer.hpp" />
+    <ClInclude Include="Exploratory\Smoke.hpp" />
+    <ClInclude Include="Exploratory\TextDictionary.hpp" />
+    <ClInclude Include="Exploratory\TextUtil.hpp" />
+    <ClInclude Include="Exploratory\UiAction.hpp" />
+    <ClInclude Include="Exploratory\UiPoint.hpp" />
+    <ClInclude Include="Exploratory\UiRectangle.hpp" />
+    <ClInclude Include="Exploratory\UiState.hpp" />
+    <ClInclude Include="Exploratory\UiStateBack.hpp" />
+    <ClInclude Include="Exploratory\UiStateClickable.hpp" />
+    <ClInclude Include="Exploratory\UiStateCoverage.hpp" />
+    <ClInclude Include="Exploratory\UiStateEditText.hpp" />
+    <ClInclude Include="Exploratory\UiStateGeneral.hpp" />
+    <ClInclude Include="Exploratory\UiStateHome.hpp" />
+    <ClInclude Include="Exploratory\UiStateMenu.hpp" />
+    <ClInclude Include="Exploratory\UiStateObject.hpp" />
+    <ClInclude Include="Exploratory\UiStateSwipe.hpp" />
+    <ClInclude Include="Exploratory\ViewHierarchyParser.hpp" />
+    <ClInclude Include="FileCommon.hpp" />
+    <ClInclude Include="Legacy\LaunchGenerator.hpp" />
+    <ClInclude Include="Legacy\LaunchTest.hpp" />
+    <ClInclude Include="Legacy\TimeMeasure.hpp" />
+    <ClInclude Include="LoggerProxySink.hpp" />
+    <ClInclude Include="ObjectCommon.hpp" />
+    <ClInclude Include="ObjectRecognize\AKazeObjectRecognize.hpp" />
+    <ClInclude Include="ObjectRecognize\AudioRecognize.hpp" />
+    <ClInclude Include="ObjectRecognize\ButtonDetection.hpp" />
+    <ClInclude Include="ObjectRecognize\FeatureMatcher.hpp" />
+    <ClInclude Include="ObjectRecognize\HistogramRecognize.hpp" />
+    <ClInclude Include="ObjectRecognize\PointMatcher.hpp" />
+    <ClInclude Include="ObjectRecognize\ObjectRecognize.hpp" />
+    <ClInclude Include="ObjectRecognize\ORBObjectRecognize.hpp" />
+    <ClInclude Include="ObjectRecognize\Shape.hpp" />
+    <ClInclude Include="ObjectRecognize\ShapeExtractor.hpp" />
+    <ClInclude Include="ObjectRecognize\ShapeMatcher.hpp" />
+    <ClInclude Include="ObjectRecognize\ShapeUtil.hpp" />
+    <ClInclude Include="QScript\FPSMeasure.hpp" />
+    <ClInclude Include="QScript\HighResolutionTimer.hpp" />
+    <ClInclude Include="QScript\MPMPowerMeasure.hpp" />
+    <ClInclude Include="QScript\OnDeviceScriptRecorder.hpp" />
+    <ClInclude Include="QScript\PowerMeasure.hpp" />
+    <ClInclude Include="QScript\QReplayInfo.hpp" />
+    <ClInclude Include="QScript\QScript.hpp" />
+    <ClInclude Include="QScript\ScriptEngineBase.hpp" />
+    <ClInclude Include="QScript\ScriptHelper.hpp" />
+    <ClInclude Include="QScript\ScriptRecorder.hpp" />
+    <ClInclude Include="QScript\ScriptReplayer.hpp" />
+    <ClInclude Include="QScript\SpinLock.hpp" />
+    <ClInclude Include="QScript\StopWatch.hpp" />
+    <ClInclude Include="QScript\VideoCaptureAdapter.hpp" />
+    <ClInclude Include="QScript\VideoCaptureProxy.hpp" />
+    <ClInclude Include="QScript\VideoWriterProxy.hpp" />
+    <ClInclude Include="Report\IndexReport.hpp" />
+    <ClInclude Include="Report\TestReportSummary.hpp" />
+    <ClInclude Include="ResultChecker\AudioChecker.hpp" />
+    <ClInclude Include="ResultChecker\AudioFormGenerator.hpp" />
+    <ClInclude Include="ResultChecker\BlankPagesChecker.hpp" />
+    <ClInclude Include="ResultChecker\Checker.hpp" />
+    <ClInclude Include="ResultChecker\DialogChecker.hpp" />
+    <ClInclude Include="ResultChecker\FlickeringChecker.hpp" />
+    <ClInclude Include="ResultChecker\ImageChecker.hpp" />
+    <ClInclude Include="ResultChecker\NoResponseChecker.hpp" />
+    <ClInclude Include="ResultChecker\ResultChecker.hpp" />
+    <ClInclude Include="ResultChecker\RunningChecker.hpp" />
+    <ClInclude Include="ResultChecker\ScreenFrozenChecker.hpp" />
+    <ClInclude Include="ResultChecker\VideoChecker.hpp" />
+    <ClInclude Include="Report\TestReport.hpp" />
+    <ClInclude Include="Report\TestReportCommon.hpp" />
+    <ClInclude Include="TestInterface\GracefulThread.hpp" />
+    <ClInclude Include="TestInterface\TestGroup.hpp" />
+    <ClInclude Include="TestInterface\TestInterface.hpp" />
+    <ClInclude Include="TestManager.hpp" />
+    <ClInclude Include="TextRecognize\Binarization.hpp" />
+    <ClInclude Include="TextRecognize\MSER.hpp" />
+    <ClInclude Include="TextRecognize\MserTree.hpp" />
+    <ClInclude Include="TextRecognize\OCRCorrector.hpp" />
+    <ClInclude Include="TextRecognize\OCRDictionary.hpp" />
+    <ClInclude Include="TextRecognize\OCRTesseract.hpp" />
+    <ClInclude Include="TextRecognize\RobustSceneText.hpp" />
+    <ClInclude Include="TextRecognize\SceneTextExtractor.hpp" />
+    <ClInclude Include="TextRecognize\TextRecognize.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DaVinciAPI.cpp" />
+    <ClCompile Include="DaVinciCommon.cpp" />
+    <ClCompile Include="Demo\FfrdLifterTest.cpp" />
+    <ClCompile Include="Demo\FfrdTiltingTest.cpp" />
+    <ClCompile Include="Demo\MapPowerPusher.cpp" />
+    <ClCompile Include="Demo\TempleRunPlayBase.cpp" />
+    <ClCompile Include="Demo\TempleRunSVMPlay.cpp" />
+    <ClCompile Include="Demo\UsbPlugTest.cpp" />
+    <ClCompile Include="DeviceControl\AudioFile.cpp" />
+    <ClCompile Include="DeviceControl\AudioManager.cpp" />
+    <ClCompile Include="DeviceControl\AudioPipe.cpp" />
+    <ClCompile Include="DeviceControl\AudioPlayer.cpp" />
+    <ClCompile Include="DeviceControl\CameraCalibrate.cpp" />
+    <ClCompile Include="DeviceControl\CaptureDevice.cpp" />
+    <ClCompile Include="DeviceControl\GlobalDeviceStatus.cpp" />
+    <ClCompile Include="DeviceControl\HWAccessoryController.cpp" />
+    <ClCompile Include="DeviceControl\HyperSoftCamCapture.cpp" />
+    <ClCompile Include="DeviceControl\License.cpp" />
+    <ClCompile Include="DeviceControl\PhysicalCameraCapture.cpp" />
+    <ClCompile Include="DeviceControl\PseudoCameraCapture.cpp" />
+    <ClCompile Include="Diagnostic\Diagnostic.cpp" />
+    <ClCompile Include="Diagnostic\GetDeviceInfo.cpp" />
+    <ClCompile Include="Diagnostic\GetHostInfo.cpp" />
+    <ClCompile Include="Diagnostic\HealthyChecker.cpp" />
+    <ClCompile Include="Exploratory\AndroidBarRecognizer.cpp" />
+    <ClCompile Include="Exploratory\AppUtil.cpp" />
+    <ClCompile Include="Exploratory\BaseObjectCategory.cpp" />
+    <ClCompile Include="Exploratory\BiasFileReader.cpp" />
+    <ClCompile Include="Exploratory\BiasObject.cpp" />
+    <ClCompile Include="Exploratory\BugTriage.cpp" />
+    <ClCompile Include="Exploratory\CommonKeywordRecognizer.cpp" />
+    <ClCompile Include="Exploratory\CoverageCollector.cpp" />
+    <ClCompile Include="Exploratory\CrossRecognizer.cpp" />
+    <ClCompile Include="Exploratory\DownloadAppRecognizer.cpp" />
+    <ClCompile Include="Exploratory\EventDispatcher.cpp" />
+    <ClCompile Include="Exploratory\ExploratoryEngine.cpp" />
+    <ClCompile Include="Exploratory\InputMethodRecognizer.cpp" />
+    <ClCompile Include="Exploratory\KeyboardRec.cpp" />
+    <ClCompile Include="Exploratory\KeyboardRecognizer.cpp" />
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForAbnormalFont.cpp" />
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForCrashANR.cpp" />
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForErrorDialog.cpp" />
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForInitializationIssue.cpp" />
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForLocationIssue.cpp" />
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForNetworkIssue.cpp" />
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForPopupWindow.cpp" />
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForProcessExit.cpp" />
+    <ClCompile Include="Exploratory\KeywordConfigReader.cpp" />
+    <ClCompile Include="Exploratory\KeywordRecognizer.cpp" />
+    <ClCompile Include="Exploratory\KeywordUtil.cpp" />
+    <ClCompile Include="Exploratory\LauncherAppRecognizer.cpp" />
+    <ClCompile Include="Exploratory\InstallConfirmRecognizer.cpp" />
+    <ClCompile Include="Exploratory\LicenseRecognizer.cpp" />
+    <ClCompile Include="Exploratory\LoginRecognizer.cpp" />
+    <ClCompile Include="Exploratory\MainTest.cpp" />
+    <ClCompile Include="Exploratory\MainTestReport.cpp" />
+    <ClCompile Include="Exploratory\ObjectLabelDispatcher.cpp" />
+    <ClCompile Include="Exploratory\ObjectRecognizer.cpp" />
+    <ClCompile Include="Exploratory\ObjectUtil.cpp" />
+    <ClCompile Include="Exploratory\RnRKeywordRecognizer.cpp" />
+    <ClCompile Include="Exploratory\SeedRandom.cpp" />
+    <ClCompile Include="Exploratory\SerializationUtil.cpp" />
+    <ClCompile Include="Exploratory\SharingKeywordRecognizer.cpp" />
+    <ClCompile Include="Exploratory\Smoke.cpp" />
+    <ClCompile Include="Exploratory\TextDictionary.cpp" />
+    <ClCompile Include="Exploratory\TextUtil.cpp" />
+    <ClCompile Include="Exploratory\UiAction.cpp" />
+    <ClCompile Include="Exploratory\UiPoint.cpp" />
+    <ClCompile Include="Exploratory\UiRectangle.cpp" />
+    <ClCompile Include="Exploratory\UiState.cpp" />
+    <ClCompile Include="Exploratory\UiStateBack.cpp" />
+    <ClCompile Include="Exploratory\UiStateClickable.cpp" />
+    <ClCompile Include="Exploratory\UiStateCoverage.cpp" />
+    <ClCompile Include="Exploratory\UiStateEditText.cpp" />
+    <ClCompile Include="Exploratory\UiStateGeneral.cpp" />
+    <ClCompile Include="Exploratory\UiStateHome.cpp" />
+    <ClCompile Include="Exploratory\UiStateMenu.cpp" />
+    <ClCompile Include="Exploratory\UiStateObject.cpp" />
+    <ClCompile Include="Exploratory\UiStateSwipe.cpp" />
+    <ClCompile Include="Legacy\LaunchGenerator.cpp" />
+    <ClCompile Include="Exploratory\ViewHierarchyParser.cpp" />
+    <ClCompile Include="Legacy\LaunchTest.cpp" />
+    <ClCompile Include="Legacy\TimeMeasure.cpp" />
+    <ClCompile Include="LoggerProxySink.cpp" />
+    <ClCompile Include="ObjectRecognize\AKazeObjectRecognize.cpp" />
+    <ClCompile Include="ObjectRecognize\AudioRecognize.cpp" />
+    <ClCompile Include="ObjectRecognize\ButtonDetection.cpp" />
+    <ClCompile Include="ObjectRecognize\FeatureMatcher.cpp" />
+    <ClCompile Include="ObjectRecognize\HistogramRecognize.cpp" />
+    <ClCompile Include="ObjectRecognize\PointMatcher.cpp" />
+    <ClCompile Include="ObjectRecognize\ObjectRecognize.cpp" />
+    <ClCompile Include="ObjectRecognize\ORBObjectRecognize.cpp" />
+    <ClCompile Include="ObjectRecognize\ShapeExtractor.cpp" />
+    <ClCompile Include="ObjectRecognize\ShapeMatcher.cpp" />
+    <ClCompile Include="ObjectRecognize\ShapeUtil.cpp" />
+    <ClCompile Include="QScript\FPSMeasure.cpp" />
+    <ClCompile Include="QScript\HighResolutionTimer.cpp" />
+    <ClCompile Include="QScript\MPMPowerMeasure.cpp" />
+    <ClCompile Include="QScript\OnDeviceScriptRecorder.cpp" />
+    <ClCompile Include="QScript\PowerMeasure.cpp" />
+    <ClCompile Include="QScript\QReplayInfo.cpp" />
+    <ClCompile Include="QScript\QScript.cpp" />
+    <ClCompile Include="QScript\ScriptEngineBase.cpp" />
+    <ClCompile Include="QScript\ScriptHelper.cpp" />
+    <ClCompile Include="QScript\ScriptRecorder.cpp" />
+    <ClCompile Include="QScript\ScriptReplayer.cpp" />
+    <ClCompile Include="QScript\StopWatch.cpp" />
+    <ClCompile Include="QScript\VideoCaptureAdapter.cpp" />
+    <ClCompile Include="QScript\VideoCaptureProxy.cpp" />
+    <ClCompile Include="QScript\VideoWriterProxy.cpp" />
+    <ClCompile Include="Report\IndexReport.cpp" />
+    <ClCompile Include="Report\TestReport.cpp" />
+    <ClCompile Include="Report\TestReportSummary.cpp" />
+    <ClCompile Include="ResultChecker\AudioChecker.cpp" />
+    <ClCompile Include="ResultChecker\AudioFormGenerator.cpp" />
+    <ClCompile Include="ResultChecker\BlankPagesChecker.cpp" />
+    <ClCompile Include="ResultChecker\Checker.cpp" />
+    <ClCompile Include="ResultChecker\DialogChecker.cpp" />
+    <ClCompile Include="ResultChecker\FlickeringChecker.cpp" />
+    <ClCompile Include="ResultChecker\ImageChecker.cpp" />
+    <ClCompile Include="ResultChecker\NoResponseChecker.cpp" />
+    <ClCompile Include="ResultChecker\ResultChecker.cpp" />
+    <ClCompile Include="ResultChecker\RunningChecker.cpp" />
+    <ClCompile Include="ResultChecker\ScreenFrozenChecker.cpp" />
+    <ClCompile Include="ResultChecker\VideoChecker.cpp" />
+    <ClCompile Include="TestInterface\TestGroup.cpp" />
+    <ClCompile Include="TestInterface\TestInterface.cpp" />
+    <ClCompile Include="DeviceControl\AndroidTargetDevice.cpp" />
+    <ClCompile Include="DeviceControl\DeviceManager.cpp" />
+    <ClCompile Include="DeviceControl\TargetDevice.cpp" />
+    <ClCompile Include="TestManager.cpp" />
+    <ClCompile Include="TextRecognize\Binarization.cpp" />
+    <ClCompile Include="TextRecognize\MSER.cpp" />
+    <ClCompile Include="TextRecognize\MserTree.cpp" />
+    <ClCompile Include="TextRecognize\OCRCorrector.cpp" />
+    <ClCompile Include="TextRecognize\OCRDictionary.cpp" />
+    <ClCompile Include="TextRecognize\OCRTesseract.cpp" />
+    <ClCompile Include="TextRecognize\RobustSceneText.cpp" />
+    <ClCompile Include="TextRecognize\SceneTextExtractor.cpp" />
+    <ClCompile Include="TextRecognize\TextRecognize.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="DaVinciConfig.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeviceControl\MAgent.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeviceControl\DaVinci.lic" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Diagnostic\DeviceCheckList.txt">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Page>
+    <Page Include="Diagnostic\HostCheckList.txt">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Exploratory\ThirdPartySO.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CBD20CCA-83C1-4F79-9533-88298E66C7DD}</ProjectGuid>
+    <RootNamespace>DaVinciLib</RootNamespace>
+    <ProjectName>DaVinciLib</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static_Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static_Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Static_Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Static_Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\Exploratory;$(ProjectDir)\Diagnostic;$(ProjectDir)\DeviceControl;$(ProjectDir)\Legacy;$(ProjectDir)\QScript;$(ProjectDir)\TestInterface;$(ProjectDir)\Report;$(ProjectDir)\Demo;$(ProjectDir)\TextRecognize;$(ProjectDir)\ObjectRecognize;$(ProjectDir)\ResultChecker;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(SolutionDir)Libs\OpenCV\include\;$(SolutionDir)Libs\Boost\include\;$(SolutionDir)Libs\Tesseract\include\;$(SolutionDir)Libs\Xerces\include\;$(SolutionDir)Libs\HyperSoftCam\include;$(SolutionDir)Libs\Zlib\include;$(SolutionDir)Libs\OpenAL\include;$(SolutionDir)Libs\LibSndfile\include;$(SolutionDir)Libs\KissFFT\include;$(SolutionDir)Libs\Caffe\include\</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(WindowsSDK_LibraryPath_x64);$(SolutionDir)Libs\OpenCV\lib\x64\vc110;$(SolutionDir)Libs\Caffe\lib\x64\vc110;$(SolutionDir)Libs\Boost\lib\x64\vc110;$(SolutionDir)Libs\Tesseract\lib\x64\vc110;$(SolutionDir)Libs\Xerces\lib\x64\vc110;$(SolutionDir)Libs\HyperSoftCam\lib\x64\vc110;$(SolutionDir)Libs\Zlib\lib\x64\vc110;$(SolutionDir)Libs\OpenAL\lib\x64\vc110;$(SolutionDir)Libs\LibSndfile\lib\x64\vc110</LibraryPath>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static_Debug|x64'">
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\Exploratory;$(ProjectDir)\Diagnostic;$(ProjectDir)\DeviceControl;$(ProjectDir)\Legacy;$(ProjectDir)\QScript;$(ProjectDir)\TestInterface;$(ProjectDir)\Report;$(ProjectDir)\Demo;$(ProjectDir)\TextRecognize;$(ProjectDir)\ObjectRecognize;$(ProjectDir)\ResultChecker;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(SolutionDir)Libs\OpenCV\include\;$(SolutionDir)Libs\Boost\include\;$(SolutionDir)Libs\Tesseract\include\;$(SolutionDir)Libs\Xerces\include\;$(SolutionDir)Libs\HyperSoftCam\include;$(SolutionDir)Libs\Zlib\include;$(SolutionDir)Libs\OpenAL\include;$(SolutionDir)Libs\LibSndfile\include;$(SolutionDir)Libs\KissFFT\include;$(SolutionDir)Libs\Caffe\include\</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x64);$(SolutionDir)Libs\OpenCV\lib\x64\vc110;$(SolutionDir)Libs\Boost\lib\x64\vc110;$(SolutionDir)Libs\Caffe\lib\x64\vc110;$(SolutionDir)Libs\Tesseract\lib\x64\vc110;$(SolutionDir)Libs\Xerces\lib\x64\vc110;$(SolutionDir)Libs\HyperSoftCam\lib\x64\vc110;$(SolutionDir)Libs\Zlib\lib\x64\vc110;$(SolutionDir)Libs\OpenAL\lib\x64\vc110;$(SolutionDir)Libs\LibSndfile\lib\x64\vc110</LibraryPath>
+    <TargetName>$(ProjectName)_d</TargetName>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\Exploratory;$(ProjectDir)\Diagnostic;$(ProjectDir)\DeviceControl;$(ProjectDir)\Legacy;$(ProjectDir)\QScript;$(ProjectDir)\TestInterface;$(ProjectDir)\Report;$(ProjectDir)\Demo;$(ProjectDir)\TextRecognize;$(ProjectDir)\ObjectRecognize;$(ProjectDir)\ResultChecker;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(SolutionDir)Libs\OpenCV\include\;$(SolutionDir)Libs\Boost\include\;$(SolutionDir)Libs\Tesseract\include\;$(SolutionDir)Libs\Xerces\include\;$(SolutionDir)Libs\HyperSoftCam\include;$(SolutionDir)Libs\Zlib\include;$(SolutionDir)Libs\OpenAL\include;$(SolutionDir)Libs\LibSndfile\include;$(SolutionDir)Libs\KissFFT\include;$(SolutionDir)Libs\Caffe\include\</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib\amd64;$(VCInstallDir)atlmfc\lib\amd64;$(WindowsSDK_LibraryPath_x64);$(SolutionDir)Libs\OpenCV\lib\x64\vc110;$(SolutionDir)Libs\Boost\lib\x64\vc110;$(SolutionDir)Libs\Tesseract\lib\x64\vc110;$(SolutionDir)Libs\Xerces\lib\x64\vc110;$(SolutionDir)Libs\HyperSoftCam\lib\x64\vc110;$(SolutionDir)Libs\Zlib\lib\x64\vc110;$(SolutionDir)Libs\OpenAL\lib\x64\vc110;$(SolutionDir)Libs\LibSndfile\lib\x64\vc110;$(SolutionDir)Libs\Caffe\lib\x64\vc110</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Static_Release|x64'">
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+    <IncludePath>$(ProjectDir)\;$(ProjectDir)\Exploratory;$(ProjectDir)\Diagnostic;$(ProjectDir)\DeviceControl;$(ProjectDir)\Legacy;$(ProjectDir)\QScript;$(ProjectDir)\TestInterface;$(ProjectDir)\Report;$(ProjectDir)\Demo;$(ProjectDir)\TextRecognize;$(ProjectDir)\ObjectRecognize;$(ProjectDir)\ResultChecker;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(SolutionDir)Libs\OpenCV\include\;$(SolutionDir)Libs\Boost\include\;$(SolutionDir)Libs\Caffe\include\;$(SolutionDir)Libs\Tesseract\include\;$(SolutionDir)Libs\Xerces\include\;$(SolutionDir)Libs\HyperSoftCam\include;$(SolutionDir)Libs\Zlib\include;$(SolutionDir)Libs\OpenAL\include;$(SolutionDir)Libs\LibSndfile\include;$(SolutionDir)Libs\KissFFT\include</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSDK_LibraryPath_x64);$(SolutionDir)Libs\OpenCV\lib\x64\vc110;$(SolutionDir)Libs\Boost\lib\x64\vc110;$(SolutionDir)Libs\Caffe\lib\x64\vc110;$(SolutionDir)Libs\Tesseract\lib\x64\vc110;$(SolutionDir)Libs\Xerces\lib\x64\vc110;$(SolutionDir)Libs\HyperSoftCam\lib\x64\vc110;$(SolutionDir)Libs\Zlib\lib\x64\vc110;$(SolutionDir)Libs\OpenAL\lib\x64\vc110;$(SolutionDir)Libs\LibSndfile\lib\x64\vc110</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;_WINDLL;%(PreprocessorDefinitions);_SCL_SECURE_NO_WARNINGS;DAVINCI_EXPORTED;HAVE_TESSERACT;XERCES_STATIC_LIBRARY;XERCES_TMPLSINC;ZLIB_WINAPI;_DEBUG;WIN64</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4100;4512;4714;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libsndfile-1.lib;OpenAL32_d.lib;winmm.lib;opencv_calib3d249d.lib;opencv_contrib249d.lib;opencv_core249d.lib;opencv_features2d249d.lib;opencv_flann249d.lib;opencv_gpu249d.lib;opencv_highgui249d.lib;opencv_imgproc249d.lib;opencv_legacy249d.lib;opencv_ml249d.lib;opencv_objdetect249d.lib;opencv_ocl249d.lib;opencv_photo249d.lib;opencv_superres249d.lib;opencv_ts249d.lib;opencv_video249d.lib;opencv_videostab249d.lib;opencv_shape249d.lib;opencv_saliency249d.lib;libcamera_less.lib;libtesseract302_d.lib;%(AdditionalDependencies);xerces-c_static_3D.lib;zlibcppwrapper_d.lib;zlibstat_d.lib;minizip_d.lib;miniunz_d.lib;libprotobuf_d.lib;cublas.lib;cuda.lib;curand.lib;cudart.lib;gflags.lib;gflags_nothreads.lib;libglogd.lib;mkl_intel_lp64.lib;mkl_intel_thread.lib;mkl_core.lib;libiomp5md.lib;pthreadVC2_x64.lib;libleveldbd.lib;lmdbd.lib;hdf5_D.lib;hdf5_hl_D.lib;caffe_d.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutputPath)CameraConfig
+xcopy $(ProjectDir)CameraConfig $(OutputPath)CameraConfig /Y /R /Q /S /E
+mkdir $(OutputPath)CameralessAgent
+xcopy $(ProjectDir)CameralessAgent $(OutputPath)CameralessAgent /Y /R /Q /S /E
+mkdir $(OutputPath)PowerTest
+xcopy $(ProjectDir)PowerTest $(OutputPath)PowerTest /Y /R /Q /S /E
+xcopy $(ProjectDir)DeviceControl\DaVinci.lic $(OutputPath) /Y /R /Q /S /E
+xcopy $(ProjectDir)Diagnostic\*.txt $(OutputPath) /Y /R /Q /S /E
+xcopy $(ProjectDir)Diagnostic\*.txt $(OutputPath) /Y /R /Q /S /E
+xcopy $(ProjectDir)Exploratory\*.txt $(OutputPath) /Y /R /Q /S /E
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Static_Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;_WINDLL;%(PreprocessorDefinitions);_SCL_SECURE_NO_WARNINGS;DAVINCI_EXPORTED;HAVE_TESSERACT;XERCES_STATIC_LIBRARY;XERCES_TMPLSINC;DAVINCI_LIB_STATIC;ZLIB_WINAPI</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4100;4512;4714;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libsndfile-1.lib;OpenAL32_d.lib;winmm.lib;opencv_calib3d249d.lib;opencv_contrib249d.lib;opencv_core249d.lib;opencv_features2d249d.lib;opencv_flann249d.lib;opencv_gpu249d.lib;opencv_highgui249d.lib;opencv_imgproc249d.lib;opencv_legacy249d.lib;opencv_ml249d.lib;opencv_objdetect249d.lib;opencv_ocl249d.lib;opencv_photo249d.lib;opencv_superres249d.lib;opencv_ts249d.lib;opencv_video249d.lib;opencv_videostab249d.lib;libcamera_less.lib;xerces-c_static_3D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutputPath)CameraConfig
+xcopy $(ProjectDir)CameraConfig $(OutputPath)CameraConfig /Y /R /Q /S /E
+mkdir $(OutputPath)CameralessAgent
+xcopy $(ProjectDir)CameralessAgent $(OutputPath)CameralessAgent /Y /R /Q /S /E
+xcopy $(ProjectDir)DeviceControl\DaVinci.lic $(OutputPath) /Y /R /Q /S /E
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_WIN32_WINNT=0x0501;_WINDLL;_SCL_SECURE_NO_WARNINGS;DAVINCI_EXPORTED;HAVE_TESSERACT;XERCES_TMPLSINC;XERCES_STATIC_LIBRARY;ZLIB_WINAPI;NDEBUG;WIN64</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4100;4512;4714;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libsndfile-1.lib;OpenAL32.lib;winmm.lib;opencv_calib3d249.lib;opencv_contrib249.lib;opencv_core249.lib;opencv_features2d249.lib;opencv_flann249.lib;opencv_gpu249.lib;opencv_highgui249.lib;opencv_imgproc249.lib;opencv_legacy249.lib;opencv_ml249.lib;opencv_objdetect249.lib;opencv_ocl249.lib;opencv_photo249.lib;opencv_superres249.lib;opencv_ts249.lib;opencv_video249.lib;opencv_videostab249.lib;opencv_shape249.lib;opencv_saliency249.lib;libcamera_less.lib;libtesseract302.lib;%(AdditionalDependencies);xerces-c_static_3.lib;zlibcppwrapper.lib;zlibstat.lib;minizip.lib;miniunz.lib;libprotobuf.lib;cublas.lib;cuda.lib;curand.lib;cudart.lib;gflags.lib;gflags_nothreads.lib;libglog.lib;mkl_intel_lp64.lib;mkl_intel_thread.lib;mkl_core.lib;libiomp5md.lib;pthreadVC2_x64.lib;libleveldb.lib;lmdb.lib;hdf5.lib;hdf5_hl.lib;caffe.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutputPath)CameraConfig
+xcopy $(ProjectDir)CameraConfig $(OutputPath)CameraConfig /Y /R /Q /S /E
+mkdir $(OutputPath)CameralessAgent
+xcopy $(ProjectDir)CameralessAgent $(OutputPath)CameralessAgent /Y /R /Q /S /E
+mkdir $(OutputPath)PowerTest
+xcopy $(ProjectDir)PowerTest $(OutputPath)PowerTest /Y /R /Q /S /E
+xcopy $(ProjectDir)Diagnostic\*.txt $(OutputPath) /Y /R /Q /S /E
+xcopy $(ProjectDir)Diagnostic\*.txt $(OutputPath) /Y /R /Q /S /E
+xcopy $(ProjectDir)Exploratory\*.txt $(OutputPath) /Y /R /Q /S /E
+xcopy $(ProjectDir)DeviceControl\DaVinci.lic $(OutputPath) /Y /R /Q /S /E
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Static_Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);_WIN32_WINNT=0x0501;_WINDLL;_SCL_SECURE_NO_WARNINGS;DAVINCI_EXPORTED;HAVE_TESSERACT;XERCES_TMPLSINC;XERCES_STATIC_LIBRARY;DAVINCI_LIB_STATIC;ZLIB_WINAPI;NDEBUG</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4100;4512;4714;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libsndfile-1.lib;OpenAL32.lib;winmm.lib;opencv_calib3d249.lib;opencv_contrib249.lib;opencv_core249.lib;opencv_features2d249.lib;opencv_flann249.lib;opencv_gpu249.lib;opencv_highgui249.lib;opencv_imgproc249.lib;opencv_legacy249.lib;opencv_ml249.lib;opencv_objdetect249.lib;opencv_ocl249.lib;opencv_photo249.lib;opencv_superres249.lib;opencv_ts249.lib;opencv_video249.lib;opencv_videostab249.lib;libcamera_less.lib;%(AdditionalDependencies);xerces-c_static_3.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>mkdir $(OutputPath)CameraConfig
+xcopy $(ProjectDir)CameraConfig $(OutputPath)CameraConfig /Y /R /Q /S /E
+mkdir $(OutputPath)CameralessAgent
+xcopy $(ProjectDir)CameralessAgent $(OutputPath)CameralessAgent /Y /R /Q /S /E
+xcopy $(ProjectDir)DeviceControl\DaVinci.lic $(OutputPath) /Y /R /Q /S /E
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

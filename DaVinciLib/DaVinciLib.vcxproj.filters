@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="TestInterface\TestInterface.cpp">
+      <Filter>TestInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\TargetDevice.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\AndroidTargetDevice.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\DeviceManager.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="TestInterface\TestGroup.cpp">
+      <Filter>TestInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="Report\TestReport.cpp">
+      <Filter>Report</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\CaptureDevice.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\HyperSoftCamCapture.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\AKazeObjectRecognize.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\FeatureMatcher.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\ObjectRecognize.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\ORBObjectRecognize.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Legacy\LaunchTest.cpp">
+      <Filter>Legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Legacy\TimeMeasure.cpp">
+      <Filter>Legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="DaVinciAPI.cpp" />
+    <ClCompile Include="DaVinciCommon.cpp" />
+    <ClCompile Include="TestManager.cpp" />
+    <ClCompile Include="ObjectRecognize\HistogramRecognize.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiPoint.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiRectangle.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\BiasObject.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\BiasFileReader.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\PseudoCameraCapture.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiState.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateBack.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateClickable.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateCoverage.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\QScript.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\ScriptReplayer.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\ScriptEngineBase.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateEditText.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateGeneral.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateHome.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateMenu.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateObject.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiStateSwipe.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\UiAction.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\ScriptRecorder.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\BaseObjectCategory.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\ObjectUtil.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\OCRTesseract.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\TextRecognize.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\AndroidBarRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\DownloadAppRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\LauncherAppRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\HighResolutionTimer.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeyboardRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\ObjectRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\StopWatch.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\Smoke.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\CoverageCollector.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\ExploratoryEngine.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\ShapeExtractor.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\HWAccessoryController.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\ShapeMatcher.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\FfrdTiltingTest.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\ScriptHelper.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\FfrdLifterTest.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\MainTest.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\UsbPlugTest.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\Checker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\RunningChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\ResultChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\CameraCalibrate.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\PhysicalCameraCapture.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Report\TestReportSummary.cpp">
+      <Filter>Report</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\SceneTextExtractor.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\AudioChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\VideoChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\DialogChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\ImageChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\LicenseRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\FPSMeasure.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="LoggerProxySink.cpp" />
+    <ClCompile Include="Demo\MapPowerPusher.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\LoginRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\AudioManager.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\AudioPipe.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\AudioFile.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\AudioRecognize.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\AudioPlayer.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="Report\IndexReport.cpp">
+      <Filter>Report</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\AppUtil.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\InputMethodRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\InstallConfirmRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Diagnostic\Diagnostic.cpp">
+      <Filter>Diagnostic</Filter>
+    </ClCompile>
+    <ClCompile Include="Diagnostic\GetDeviceInfo.cpp">
+      <Filter>Diagnostic</Filter>
+    </ClCompile>
+    <ClCompile Include="Diagnostic\GetHostInfo.cpp">
+      <Filter>Diagnostic</Filter>
+    </ClCompile>
+    <ClCompile Include="Diagnostic\HealthyChecker.cpp">
+      <Filter>Diagnostic</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\TempleRunPlayBase.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Demo\TempleRunSVMPlay.cpp">
+      <Filter>Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\OnDeviceScriptRecorder.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\SerializationUtil.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForNetworkIssue.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForInitializationIssue.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\PointMatcher.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\TextUtil.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\ShapeUtil.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForAbnormalFont.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\TextDictionary.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\TextDictionary.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\TextDictionary.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\ScreenFrozenChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\MainTestReport.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\CommonKeywordRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordConfigReader.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectRecognize\ButtonDetection.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\OCRCorrector.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\OCRDictionary.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordUtil.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForErrorDialog.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForCrashANR.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\MserTree.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\RobustSceneText.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\CrossRecognizer.cpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForProcessExit.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Legacy\LaunchGenerator.cpp">
+      <Filter>Legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\ViewHierarchyParser.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeyboardRec.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\PowerMeasure.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\MPMPowerMeasure.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\MSER.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\License.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceControl\GlobalDeviceStatus.cpp">
+      <Filter>DeviceControl</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\VideoWriterProxy.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\VideoCaptureProxy.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\RnRKeywordRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\VideoCaptureAdapter.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="QScript\QReplayInfo.cpp">
+      <Filter>QScript</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\FlickeringChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\NoResponseChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\EventDispatcher.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\AudioFormGenerator.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="ResultChecker\BlankPagesChecker.cpp">
+      <Filter>ResultChecker</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRecognize\Binarization.cpp">
+      <Filter>TextRecognize</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\SharingKeywordRecognizer.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForLocationIssue.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\SeedRandom.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\BugTriage.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\ObjectLabelDispatcher.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+    <ClCompile Include="Exploratory\KeywordCheckHandlerForPopupWindow.cpp">
+      <Filter>Exploratory</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DeviceControl\TargetDevice.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\DeviceManager.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\DeviceControlCommon.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\CaptureDevice.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\AndroidTargetDevice.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="TestInterface\GracefulThread.hpp">
+      <Filter>TestInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="TestInterface\TestGroup.hpp">
+      <Filter>TestInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="TestInterface\TestInterface.hpp">
+      <Filter>TestInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\FPSMeasure.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="Report\TestReport.hpp">
+      <Filter>Report</Filter>
+    </ClInclude>
+    <ClInclude Include="Report\TestReportCommon.hpp">
+      <Filter>Report</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\ScriptReplayer.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\ScriptEngineBase.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\ScriptRecorder.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\CameraCalibrate.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\DeviceCrashDetectTest.hpp">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\FfrdLifterTest.hpp">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\FfrdTiltingTest.hpp">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\UsbPlugTest.hpp">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\TempleRunSVMPlay.hpp">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\HyperSoftCamCapture.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\AKazeObjectRecognize.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\FeatureMatcher.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\ObjectRecognize.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\ORBObjectRecognize.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="Legacy\LaunchTest.hpp">
+      <Filter>Legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Legacy\TimeMeasure.hpp">
+      <Filter>Legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="DaVinciAPI.h" />
+    <ClInclude Include="DaVinciCommon.hpp" />
+    <ClInclude Include="DaVinciDefs.h" />
+    <ClInclude Include="DaVinciDefs.hpp" />
+    <ClInclude Include="DaVinciStatus.hpp" />
+    <ClInclude Include="TextRecognize\TextRecognize.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\HistogramRecognize.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiPoint.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiRectangle.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\BiasObject.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\BiasFileReader.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\PseudoCameraCapture.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiState.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateBack.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateClickable.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateCoverage.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateEditText.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateGeneral.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateHome.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateMenu.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateObject.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiStateSwipe.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\QScript.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\UiAction.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\BaseObjectCategory.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\ObjectUtil.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\AndroidBarRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\DownloadAppRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\LauncherAppRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\HighResolutionTimer.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeyboardRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\ObjectRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\SpinLock.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\StopWatch.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\Smoke.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\CoverageCollector.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\ExploratoryEngine.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectCommon.hpp" />
+    <ClInclude Include="ObjectRecognize\ShapeExtractor.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\HWAccessoryController.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\ShapeMatcher.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\Shape.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\ScriptHelper.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="FileCommon.hpp" />
+    <ClInclude Include="Exploratory\MainTest.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\Checker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\RunningChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\ResultChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\PhysicalCameraCapture.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Report\TestReportSummary.hpp">
+      <Filter>Report</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRecognize\SceneTextExtractor.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\AudioChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\VideoChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\DialogChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\ImageChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\LicenseRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="LoggerProxySink.hpp" />
+    <ClInclude Include="DaVinciConfig.h" />
+    <ClInclude Include="Demo\MapPowerPusher.hpp">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\LoginRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\AudioManager.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\AudioRecognize.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\AudioPipe.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\AudioFile.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\AudioPlayer.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="Report\IndexReport.hpp">
+      <Filter>Report</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\AppUtil.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\InputMethodRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\InstallConfirmRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Diagnostic\Diagnostic.hpp">
+      <Filter>Diagnostic</Filter>
+    </ClInclude>
+    <ClInclude Include="Diagnostic\GetDeviceInfo.hpp">
+      <Filter>Diagnostic</Filter>
+    </ClInclude>
+    <ClInclude Include="Diagnostic\GetHostInfo.hpp">
+      <Filter>Diagnostic</Filter>
+    </ClInclude>
+    <ClInclude Include="Diagnostic\HealthyChecker.hpp">
+      <Filter>Diagnostic</Filter>
+    </ClInclude>
+    <ClInclude Include="Demo\TempleRunPlayBase.hpp">
+      <Filter>Demo</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\OnDeviceScriptRecorder.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\SerializationUtil.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordCheckHandler.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForNetworkIssue.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForInitializationIssue.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\PointMatcher.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\FailureType.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\TextUtil.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\ShapeUtil.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForAbnormalFont.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\TextDictionary.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\TextDictionary.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\TextDictionary.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\ScreenFrozenChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\MainTestReport.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\MainTestCommon.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\CommonKeywordRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordConfigReader.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectRecognize\ButtonDetection.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRecognize\OCRCorrector.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRecognize\OCRDictionary.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRecognize\OCRTesseract.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordUtil.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForErrorDialog.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="TestManager.hpp" />
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForCrashANR.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRecognize\MserTree.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRecognize\RobustSceneText.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\CrossRecognizer.hpp">
+      <Filter>ObjectRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForProcessExit.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Legacy\LaunchGenerator.hpp">
+      <Filter>Legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\ViewHierarchyParser.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeyboardRec.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\PowerMeasure.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\MPMPowerMeasure.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRecognize\MSER.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\License.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceControl\GlobalDeviceStatus.hpp">
+      <Filter>DeviceControl</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\VideoWriterProxy.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\VideoCaptureProxy.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\RnRKeywordRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\VideoCaptureAdapter.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="QScript\QReplayInfo.hpp">
+      <Filter>QScript</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\FlickeringChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\NoResponseChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\EventDispatcher.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\EventType.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\AudioFormGenerator.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultChecker\BlankPagesChecker.hpp">
+      <Filter>ResultChecker</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRecognize\Binarization.hpp">
+      <Filter>TextRecognize</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\SharingKeywordRecognizer.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForLocationIssue.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\SeedRandom.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\BugTriage.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\ObjectLabel.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\ObjectLabelDispatcher.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+    <ClInclude Include="Exploratory\KeywordCheckHandlerForPopupWindow.hpp">
+      <Filter>Exploratory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="DeviceControl">
+      <UniqueIdentifier>{24794e75-875d-4b73-b05b-eb7b0c7fdf6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QScript">
+      <UniqueIdentifier>{157ee0b5-1712-4656-b48f-137dbad61a45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Legacy">
+      <UniqueIdentifier>{4bce6cca-0a4e-4c33-a75a-37f820c53495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Report">
+      <UniqueIdentifier>{69b0ea33-b98d-41af-8e0b-eaf9637a0f94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Demo">
+      <UniqueIdentifier>{ad534d78-43f5-4f62-9761-55da77e97837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectRecognize">
+      <UniqueIdentifier>{28a8738a-8b96-4106-9009-08435a27b79b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exploratory">
+      <UniqueIdentifier>{b7bcb23c-8c43-470c-99ae-bd8e7355a1ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TextRecognize">
+      <UniqueIdentifier>{a4d3de8f-bc43-4de9-9bc0-8310bf3ae084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ResultChecker">
+      <UniqueIdentifier>{6e038fe9-857b-4321-85db-181f3cd9a9fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Diagnostic">
+      <UniqueIdentifier>{09b00658-296c-44ec-9612-8d5372096dca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestInterface">
+      <UniqueIdentifier>{4b82e255-14f9-40e7-9fdf-2a75b26ae8ce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="DaVinciConfig.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeviceControl\MAgent.py">
+      <Filter>DeviceControl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeviceControl\DaVinci.lic">
+      <Filter>DeviceControl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Diagnostic\DeviceCheckList.txt">
+      <Filter>Diagnostic</Filter>
+    </Page>
+    <Page Include="Diagnostic\HostCheckList.txt">
+      <Filter>Diagnostic</Filter>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Exploratory\ThirdPartySO.txt">
+      <Filter>Exploratory</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
