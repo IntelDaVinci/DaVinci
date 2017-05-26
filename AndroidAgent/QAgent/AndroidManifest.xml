@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.qagent"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:persistent="true">
+        
+        <activity
+            android:name="com.example.qagent.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />                
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.example.qagent.QAgentService"
+            android:enabled="true" 
+            android:exported="true"
+     		android:configChanges="orientation|keyboardHidden|screenSize">            
+        </service>
+
+        <activity
+            android:name="com.example.qagent.LotusActivity"
+            android:label="@string/title_activity_lotus"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" 
+            android:excludeFromRecents="true" >
+        </activity>
+        <activity
+            android:name="com.example.qagent.RotationActivity"
+            android:excludeFromRecents="true" >
+        </activity>
+        <activity
+            android:name="com.example.qagent.textchecker.TextCheckerActivity"
+            android:label="@string/title_activity_textchecker" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

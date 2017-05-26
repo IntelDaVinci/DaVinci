@@ -1,0 +1,305 @@
+diff -r ./aosp42/sdk/chimpchat/src/com/android/chimpchat/adb/AdbChimpDevice.java ./aosp42new/sdk/chimpchat/src/com/android/chimpchat/adb/AdbChimpDevice.java
+99c99
+<     private void executeAsyncCommand(final String command,
+---
+>     public void executeAsyncCommand(final String command,
+257c257
+<     private String shell(String... args) {
+---
+>     private String shell(String... args) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException{
+266c266
+<     public String shell(String cmd) {
+---
+> 	public String shell(String cmd) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException{
+268c268
+<         try {
+---
+> 	// try {
+270c270
+<         } catch (TimeoutException e) {
+---
+> 	    /*} catch (TimeoutException e) {
+282c282
+<         }
+---
+> 	    }*/
+284a285,300
+>     
+>     @Override
+>     public void shellWithoutWaiting(String cmd) throws TimeoutException, AdbCommandRejectedException , IOException {
+>         try {
+>             device.executeShellCommandJust(cmd);
+>         } catch (TimeoutException _) {
+>             return;
+>         } catch (AdbCommandRejectedException e) {
+>             LOG.log(Level.SEVERE, "Error executing command: " + cmd, e);
+>             return;
+>         } catch (IOException e) {
+>             LOG.log(Level.SEVERE, "Error executing command: " + cmd, e);
+>             return;
+>         }
+>         return;
+>     }
+318,319c334,335
+<     public void press(String keyName, TouchPressType type) {
+<         try {
+---
+>     public void press (String keyName, TouchPressType type) throws IOException {
+> 	//        try {
+330,331c346,347
+<             }
+<         } catch (IOException e) {
+---
+> 		      }
+> 	    /*        } catch (IOException e) {
+333c349
+<         }
+---
+> 	    }*/
+337c353
+<     public void press(PhysicalButton key, TouchPressType type) {
+---
+>     public void press(PhysicalButton key, TouchPressType type) throws IOException {
+351,352c367,368
+<     public void touch(int x, int y, TouchPressType type) {
+<         try {
+---
+>     public void touch(int x, int y, TouchPressType type)  throws IOException{
+> 	//        try {
+364c380
+<         } catch (IOException e) {
+---
+> 	    /*} catch (IOException e) {
+366c382
+<         }
+---
+> 	    }*/
+385c401
+<             int flags) {
+---
+>             int flags) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException{
+395c411
+<             int flags) {
+---
+>             int flags) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException{
+483c499
+<     public Map<String, Object> instrument(String packageName, Map<String, Object> args) {
+---
+>     public Map<String, Object> instrument(String packageName, Map<String, Object> args) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException{
+590a607,635
+>     @Override
+>     public void touchmove(int x, int y)  throws IOException{
+>         LinearInterpolator.Point end = new LinearInterpolator.Point(x, y);
+> 	//        try {
+>             manager.touchMove(end.getX(),end.getY());
+> 	    /*} catch (IOException e) {
+>             LOG.log(Level.SEVERE, "Error sending touch move event", e);
+> 	    }*/
+>     }
+> 
+>     @Override
+>     public void touchup(int x, int y)  throws IOException{
+>         LinearInterpolator.Point end = new LinearInterpolator.Point(x, y);
+> 	//        try {
+>             manager.touchUp(end.getX(),end.getY());
+> 	    /*} catch (IOException e) {
+>             LOG.log(Level.SEVERE, "Error sending touch up event", e);
+> 	    }*/
+>     }
+> 
+>     @Override
+>     public void touchdown(int x, int y)  throws IOException{
+>         LinearInterpolator.Point end = new LinearInterpolator.Point(x, y);
+> 	//        try {
+>             manager.touchDown(end.getX(),end.getY());
+> 	    /*} catch (IOException e) {
+>             LOG.log(Level.SEVERE, "Error sending touch down event", e);
+> 	    }*/
+>     }
+Only in ./aosp42new/sdk/chimpchat/src/com/android/chimpchat: ChimpManager.backup
+Only in ./aosp42new/sdk/chimpchat/src/com/android/chimpchat: Constants.java
+diff -r ./aosp42/sdk/chimpchat/src/com/android/chimpchat/core/IChimpDevice.java ./aosp42new/sdk/chimpchat/src/com/android/chimpchat/core/IChimpDevice.java
+24a25,28
+> import java.io.IOException;
+> import com.android.ddmlib.ShellCommandUnresponsiveException;
+> import com.android.ddmlib.TimeoutException;
+> import com.android.ddmlib.AdbCommandRejectedException;
+93c97
+<     void touch(int x, int y, TouchPressType type);
+---
+>     void touch(int x, int y, TouchPressType type) throws IOException;
+101c105
+<     void press(String keyName, TouchPressType type);
+---
+>     void press(String keyName, TouchPressType type) throws IOException;
+110c114
+<     void press(PhysicalButton key, TouchPressType type);
+---
+>     void press(PhysicalButton key, TouchPressType type)  throws IOException;
+124a129,152
+>      * Perform a touch move from one one location to another
+>      *
+>      * @param x the x coordinate of the drag's ending point
+>      * @param y the y coordinate of the drag's ending point
+>      */
+>     void touchmove(int x, int y) throws IOException;
+> 
+>     /**
+>      * Perform a touch up
+>      *
+>      * @param x the x coordinate of the touch's point
+>      * @param y the y coordinate of the touch's point
+>      */
+>     void touchup(int x, int y)  throws IOException;
+> 
+>     /**
+>      * Perform a touch down
+>      *
+>      * @param x the x coordinate of the touch's point
+>      * @param y the y coordinate of the touch's point
+>      */
+>     void touchdown(int x, int y)  throws IOException;
+> 
+>     /**
+137c165
+<     String shell(String cmd);
+---
+>     String shell(String cmd) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException;
+139a168,172
+>      * Execute a shell command.
+>      * @param cmd the command to execute
+>      */
+>     void shellWithoutWaiting(String cmd) throws TimeoutException, AdbCommandRejectedException , IOException; 
+>     /**
+170c203
+<             int flags);
+---
+>             int flags) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException;
+187c220
+<             int flags);
+---
+>             int flags) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException;
+206c239
+<             Map<String, Object> args);
+---
+>             Map<String, Object> args) throws TimeoutException, ShellCommandUnresponsiveException, AdbCommandRejectedException , IOException;
+diff -r ./aosp42/sdk/ddms/libs/ddmlib/src/com/android/ddmlib/AdbHelper.java ./aosp42new/sdk/ddms/libs/ddmlib/src/com/android/ddmlib/AdbHelper.java
+431a432,463
+>     static void executeRemoteCommandJust(InetSocketAddress adbSockAddr,
+>             String command, IDevice device)
+>             throws TimeoutException, AdbCommandRejectedException,
+>             IOException {
+>         Log.v("ddms", "execute: running " + command);
+> 
+>         SocketChannel adbChan = null;
+>         try {
+>             adbChan = SocketChannel.open(adbSockAddr);
+>             adbChan.configureBlocking(false);
+> 
+>             // if the device is not -1, then we first tell adb we're looking to
+>             // talk
+>             // to a specific device
+>             setDevice(adbChan, device);
+> 
+>             byte[] request = formAdbRequest("shell:" + command); //$NON-NLS-1$
+>             write(adbChan, request);
+> 
+>             AdbResponse resp = readAdbResponse(adbChan, false /* readDiagString */);
+>             if (resp.okay == false) {
+>                 Log.e("ddms", "ADB rejected shell command (" + command + "): " + resp.message);
+>                 throw new AdbCommandRejectedException(resp.message);
+>             }
+>         }finally {
+>             if (adbChan != null) {
+>                 adbChan.close();
+>             }
+>             Log.v("ddms", "execute: returning");
+>         }
+>     }
+> 
+diff -r ./aosp42/sdk/ddms/libs/ddmlib/src/com/android/ddmlib/Device.java ./aosp42new/sdk/ddms/libs/ddmlib/src/com/android/ddmlib/Device.java
+457a458,463
+>     public void executeShellCommandJust(String command)
+>             throws TimeoutException, AdbCommandRejectedException, 
+>             IOException {
+>         AdbHelper.executeRemoteCommandJust(AndroidDebugBridge.getSocketAddress(), command, this);
+>     }
+>    @Override
+diff -r ./aosp42/sdk/ddms/libs/ddmlib/src/com/android/ddmlib/IDevice.java ./aosp42new/sdk/ddms/libs/ddmlib/src/com/android/ddmlib/IDevice.java
+288a289,291
+>     public void executeShellCommandJust(String command)
+>             throws TimeoutException, AdbCommandRejectedException, 
+>             IOException;
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: ant-glob.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: asm-4.0.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: asm-analysis-4.0.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: asm-tree-4.0.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: assetstudio.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: freemarker-2.3.19.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: lint_api.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: lint_checks.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: lombok-ast-0.2.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: manifmerger.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: ninepatch.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: propertysheet.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: rule_api.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: sdkuilib.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.adt/libs: swtmenubar.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: common.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: commons-codec-1.4.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: commons-compress-1.0.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: commons-logging-1.1.1.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: dvlib.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: guava-13.0.1.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: httpclient-4.1.1.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: httpcore-4.1.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: httpmime-4.1.1.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: kxml2-2.3.0.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: layoutlib_api.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: sdk_common.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: sdklib.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.base/libs: sdkstats.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.ddms/libs: ddmlib.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.ddms/libs: ddmuilib.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.ddms/libs: jcommon-1.0.12.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.ddms/libs: jfreechart-1.0.9.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.ddms/libs: jfreechart-1.0.9-swt.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.ddms/libs: swtmenubar.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.ddms/libs: uiautomatorviewer.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.gldebugger: libs
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.hierarchyviewer/libs: hierarchyviewerlib.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.hierarchyviewer/libs: swtmenubar.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.monitor/libs: sdkuilib.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.tests: easymock.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.tests: kxml2-2.3.0.jar
+Only in ./aosp42new/sdk/eclipse/plugins/com.android.ide.eclipse.traceview/libs: traceview.jar
+Binary files ./aosp42/sdk/.git/index and ./aosp42new/sdk/.git/index differ
+Only in ./aosp42/sdk/.git: svn
+diff -r ./aosp42/sdk/monkeyrunner/src/com/android/monkeyrunner/MonkeyDevice.java ./aosp42new/sdk/monkeyrunner/src/com/android/monkeyrunner/MonkeyDevice.java
+173a174,187
+>     @MonkeyRunnerExported(doc = "Sends a touch move event to the specified location",
+>             args = { "x", "y" },
+>             argDocs = { "x coordinate in pixels",
+>                         "y coordinate in pixels"})
+>     public void touchMove(PyObject[] args, String[] kws) {
+>         ArgParser ap = JythonUtils.createArgParser(args,kws);
+>         Preconditions.checkNotNull(ap);
+> 
+>         int x = ap.getInt(0);
+>         int y = ap.getInt(1);
+> 
+>         impl.touchmove(x,y);
+>     }
+> 
+217a232,242
+>     }
+> 
+>     @MonkeyRunnerExported(doc = "Executes an adb shell command without waiting.",
+>             args = { "cmd"},
+>             argDocs = { "The adb shell command to execute." })
+>     public void shellWithoutWaiting(PyObject[] args, String[] kws) {
+>         ArgParser ap = JythonUtils.createArgParser(args, kws);
+>         Preconditions.checkNotNull(ap);
+> 
+>         String cmd = ap.getString(0);
+>         impl.shellWithoutWaiting(cmd);

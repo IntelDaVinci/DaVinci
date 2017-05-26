@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RnR</string>
+    <string name="action_settings">Settings</string>
+    <string name="loading">loading in progress</string>
+    <string name="connecting">connecting to server</string>
+
+</resources>

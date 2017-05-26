@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.0.5312 report, generated Wed Dec 02 13:33:30 CST 2015 -->
+
+<report>
+  <stats>
+    <packages value="1"/>
+    <classes value="7"/>
+    <methods value="47"/>
+    <srcfiles value="6"/>
+    <srclines value="686"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="100% (7/7)"/>
+      <coverage type="method, %" value="100% (47/47)"/>
+      <coverage type="block, %" value="84%  (2650/3142)"/>
+      <coverage type="line, %" value="85%  (581.8/686)"/>
+
+      <package name="com.example.qagent">
+        <coverage type="class, %" value="100% (7/7)"/>
+        <coverage type="method, %" value="100% (47/47)"/>
+        <coverage type="block, %" value="84%  (2650/3142)"/>
+        <coverage type="line, %" value="85%  (581.8/686)"/>
+
+        <srcfile name="QAgentService.java">
+          <coverage type="class, %" value="100% (2/2)"/>
+          <coverage type="method, %" value="100% (19/19)"/>
+          <coverage type="block, %" value="81%  (1646/2021)"/>
+          <coverage type="line, %" value="84%  (364.8/435)"/>
+
+          <class name="QAgentService">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (17/17)"/>
+            <coverage type="block, %" value="81%  (1579/1941)"/>
+            <coverage type="line, %" value="84%  (352.8/421)"/>
+
+            <method name="getRotationData (String): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="56%  (35/63)"/>
+              <coverage type="line, %" value="58%  (11/19)"/>
+            </method>
+            <method name="stopPerformanceThread (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="59%  (19/32)"/>
+              <coverage type="line, %" value="75%  (6/8)"/>
+            </method>
+            <method name="getSystemOrientation (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="63%  (39/62)"/>
+              <coverage type="line, %" value="64%  (14/22)"/>
+            </method>
+            <method name="initServerSocket (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="64%  (27/42)"/>
+              <coverage type="line, %" value="62%  (5/8)"/>
+            </method>
+            <method name="onHandleIntent (Intent): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="73%  (58/79)"/>
+              <coverage type="line, %" value="74%  (17/23)"/>
+            </method>
+            <method name="releaseDataSocket (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="74%  (37/50)"/>
+              <coverage type="line, %" value="86%  (12/14)"/>
+            </method>
+            <method name="initResource (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="75%  (195/260)"/>
+              <coverage type="line, %" value="74%  (34.9/47)"/>
+            </method>
+            <method name="initDataSocket (): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="78%  (54/69)"/>
+              <coverage type="line, %" value="77%  (10/13)"/>
+            </method>
+            <method name="sendToDaVinci (String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="79%  (50/63)"/>
+              <coverage type="line, %" value="86%  (12/14)"/>
+            </method>
+            <method name="startPerformanceThread (): Thread">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="84%  (21/25)"/>
+              <coverage type="line, %" value="93%  (5.6/6)"/>
+            </method>
+            <method name="msgHandler (String): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="85%  (888/1040)"/>
+              <coverage type="line, %" value="89%  (176.3/198)"/>
+            </method>
+            <method name="&lt;static initializer&gt;">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (12/12)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+            <method name="QAgentService (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (83/83)"/>
+              <coverage type="line, %" value="100% (26/26)"/>
+            </method>
+            <method name="access$000 (QAgentService, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onConfigurationChanged (Configuration): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (32/32)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="onDestroy (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (10/10)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+            <method name="releaseResource (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (15/15)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+          </class>
+          <class name="QAgentService$1">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="84%  (67/80)"/>
+            <coverage type="line, %" value="87%  (13/15)"/>
+
+            <method name="run (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="82%  (61/74)"/>
+              <coverage type="line, %" value="86%  (12/14)"/>
+            </method>
+            <method name="QAgentService$1 (QAgentService): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="RotationActivity.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (6/6)"/>
+          <coverage type="block, %" value="82%  (209/254)"/>
+          <coverage type="line, %" value="83%  (50/60)"/>
+
+          <class name="RotationActivity">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (6/6)"/>
+            <coverage type="block, %" value="82%  (209/254)"/>
+            <coverage type="line, %" value="83%  (50/60)"/>
+
+            <method name="onResume (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="63%  (69/110)"/>
+              <coverage type="line, %" value="65%  (17/26)"/>
+            </method>
+            <method name="onCreate (Bundle): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="96%  (90/94)"/>
+              <coverage type="line, %" value="94%  (17/18)"/>
+            </method>
+            <method name="&lt;static initializer&gt;">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="RotationActivity (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (15/15)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+            <method name="onDestroy (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (19/19)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="onPause (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (13/13)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="LotusActivity.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (6/6)"/>
+          <coverage type="block, %" value="83%  (274/330)"/>
+          <coverage type="line, %" value="82%  (62/76)"/>
+
+          <class name="LotusActivity">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (6/6)"/>
+            <coverage type="block, %" value="83%  (274/330)"/>
+            <coverage type="line, %" value="82%  (62/76)"/>
+
+            <method name="onResume (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="55%  (54/98)"/>
+              <coverage type="line, %" value="52%  (12/23)"/>
+            </method>
+            <method name="onDestroy (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="84%  (16/19)"/>
+              <coverage type="line, %" value="83%  (5/6)"/>
+            </method>
+            <method name="onCreate (Bundle): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="95%  (167/176)"/>
+              <coverage type="line, %" value="94%  (33/35)"/>
+            </method>
+            <method name="&lt;static initializer&gt;">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="LotusActivity (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (21/21)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="onPause (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (13/13)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="Performance.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (5/5)"/>
+          <coverage type="block, %" value="96%  (340/355)"/>
+          <coverage type="line, %" value="86%  (55/64)"/>
+
+          <class name="Performance">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (5/5)"/>
+            <coverage type="block, %" value="96%  (340/355)"/>
+            <coverage type="line, %" value="86%  (55/64)"/>
+
+            <method name="getBatteryLevel (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="93%  (39/42)"/>
+              <coverage type="line, %" value="83%  (10/12)"/>
+            </method>
+            <method name="getMemInfo (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="94%  (48/51)"/>
+              <coverage type="line, %" value="85%  (11/13)"/>
+            </method>
+            <method name="getDiskInfo (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="95%  (55/58)"/>
+              <coverage type="line, %" value="85%  (11/13)"/>
+            </method>
+            <method name="getCpuUsage (): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="97%  (192/198)"/>
+              <coverage type="line, %" value="87%  (20/23)"/>
+            </method>
+            <method name="Performance (Context): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="SystemProperty.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (2/2)"/>
+          <coverage type="block, %" value="98%  (40/41)"/>
+          <coverage type="line, %" value="91%  (10/11)"/>
+
+          <class name="SystemProperty">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="98%  (40/41)"/>
+            <coverage type="line, %" value="91%  (10/11)"/>
+
+            <method name="get (String): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="97%  (34/35)"/>
+              <coverage type="line, %" value="88%  (7/8)"/>
+            </method>
+            <method name="SystemProperty (Context): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="MainActivity.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (9/9)"/>
+          <coverage type="block, %" value="100% (141/141)"/>
+          <coverage type="line, %" value="100% (40/40)"/>
+
+          <class name="MainActivity">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (9/9)"/>
+            <coverage type="block, %" value="100% (141/141)"/>
+            <coverage type="line, %" value="100% (40/40)"/>
+
+            <method name="&lt;static initializer&gt;">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="MainActivity (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="onCreate (Bundle): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="onCreateOptionsMenu (Menu): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="onDestroy (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="showLotus (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (12/12)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="startService (View): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (13/13)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="stopLotusActivity (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (11/11)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+            <method name="stopQAgentService (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (78/78)"/>
+              <coverage type="line, %" value="100% (19/19)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>

@@ -1,0 +1,68 @@
+
+How to run emma in console mode: (emma can only work for emulator or rooted devices, you can run RunUnitTest.bat directly)
+Step 1: use svn update the latest source code. 
+
+Step 2: clean up existing test environment.
+D:\>cd d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent
+D:\>ant emma clean
+D:\>ant clean
+D:\>cd tests
+D:\>ant emma clean
+D:\>ant clean
+
+Step 3: Generate build.xml
+D:\>android update project --path d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent
+D:\>android update test-project -m d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent -p  d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent\tests
+
+Step 4: run the test
+D:\>ant emma debug install test
+
+How to build and run from Eclipse:
+
+Step 1: clean up existing test environment.
+D:\>cd d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent
+D:\>ant emma clean
+D:\>ant clean
+D:\>cd tests
+D:\>ant emma clean
+D:\>ant clean
+
+Step 2: use svn update the latest source code.
+
+Step 3: Use Eclipse to open the project.
+
+Step 4: Build and run.
+
+
+More detail information:
+
+Run emma for java code
+
+First of all i assume that you have already a project and a test project with test cases. Also you have installed the Android sdk. The android testing framework has already a built-in ability to generate a code coverage report about your tests. This built-in ability is based on emma.
+Firs of all you've to create a build.xml for your project, which should be tested:
+android update project --path <Path to your Project>
+d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent\tests>android update project --path d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent
+Next step is to create the build.xml for the test project (where the test cases are located):
+android update test-project -m <Path to your Project> -p <Path to your Testproject>
+d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent\tests>android update test-project -m d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent -p  d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent\tests
+In the next step you ccan run the coverage. Therefor you must switch into you Testproject:
+cd <Path to your Testproject>
+ant emma debug install test
+d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent\tests>cd  d:\workspace\Q\src\branches\DaVinci_CPP\AndroidAgent\QAgent\tests
+This will build, instrument, deploy and run your unit tests. It will also generate a HTML coverage report. The location of the report will be displayed in the last few lines of the Ant script’s output.
+For more Details: http://developer.android.com/tools/building/building-cmdline.html#AntReference
+Troubleshooting:
+•	If your OS doesn't know the commands you have to add some paths to the environment path variable of you OS: you have to add the Path of the android.bat (normally /tools) and the path of the ant.bat (depending where you installed Ant; If you use Eclipse with ADT it is normally there: /plugins/org.apache.ant.../bin)
+•	If you're using SDK 13 or older you've to use ant coverage instead of ant emma debug install test
+•	The tests are running completely but there is no report (and there is also a "failed"-message which contains "permission denied"): You need to use a rooted device or an emulator
+•	Generally it could help to clean your projects when you get a "BUILD FAILED"
+•	If you have libraries that you use and you get an error. Make sure you put them into a "libs" directory. ant automatically adds the libraries in "libs" to the build path.
+
+Links:
+Failed to generate emma coverage. Is emma jar on classpath?
+http://stackoverflow.com/questions/17576889/android-generate-coverage-with-emma-without-ant
+http://developer.android.com/training/testing/unit-testing/instrumented-unit-tests.html
+http://developer.android.com/training/activity-testing/activity-basic-testing.html
+http://developer.android.com/reference/android/test/AndroidTestCase.html
+http://developer.android.com/training/testing.html
+https://dzone.com/articles/my-personal-crud-story-or-how-i-came-to-cuba-platf-1

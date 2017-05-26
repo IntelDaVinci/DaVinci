@@ -1,0 +1,20 @@
+[EMMA v2.0.5312 report, generated Wed Dec 02 13:33:30 CST 2015]
+-------------------------------------------------------------------------------
+OVERALL COVERAGE SUMMARY:
+
+[class, %]	[method, %]	[block, %]	[line, %]	[name]
+100% (7/7)	100% (47/47)	84%  (2650/3142)	85%  (581.8/686)	all classes
+
+OVERALL STATS SUMMARY:
+
+total packages:	1
+total classes:	7
+total methods:	47
+total executable files:	6
+total executable lines:	686
+
+COVERAGE BREAKDOWN BY PACKAGE:
+
+[class, %]	[method, %]	[block, %]	[line, %]	[name]
+100% (7/7)	100% (47/47)	84%  (2650/3142)	85%  (581.8/686)	com.example.qagent
+-------------------------------------------------------------------------------

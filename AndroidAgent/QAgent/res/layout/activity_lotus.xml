@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".LotusActivity" >
+
+        <TextView
+        android:id="@+id/bg1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text=""
+        android:visibility="invisible"
+        android:background="@drawable/lotus_p"
+         />
+
+    <TextView
+        android:id="@+id/bg2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/lotus"
+        android:text=""
+        android:visibility="visible" />
+</RelativeLayout>
