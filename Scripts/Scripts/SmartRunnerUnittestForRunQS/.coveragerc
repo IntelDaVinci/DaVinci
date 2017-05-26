@@ -1,0 +1,13 @@
+[run]
+branch = True
+
+[report]
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+    except Exception, e:
+
+[paths]
+source =
+    C:\Users\jzhan66\Documents\uBT\Davinci\Scripts\Scripts

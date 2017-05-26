@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<PerformanceTest>
+<CFBench>
+<TimeOut>500</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\CFBench\CFBench.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>Overall Score</CheckItem>
+<CheckItem>Native Score</CheckItem>
+<CheckItem>Java Score</CheckItem>
+<CheckItem>Native MIPS</CheckItem>
+<CheckItem>Java MIPS</CheckItem>
+<CheckItem>Native MSFLOPS</CheckItem>
+<CheckItem>Java MSFLOPS</CheckItem>
+<CheckItem>Native MDFLOPS</CheckItem>
+<CheckItem>Java MDFLOPS</CheckItem>
+<CheckItem>Native MALLOCS</CheckItem>
+<CheckItem>Native Memory Read</CheckItem>
+<CheckItem>Java Memory Read</CheckItem>
+<CheckItem>Native Memory Write</CheckItem>
+<CheckItem>Java Memory Write</CheckItem>
+<CheckItem>Native Disk Read</CheckItem>
+<CheckItem>Native Disk Write</CheckItem>
+</CheckPoints>
+</CFBench>
+<Antutu>
+<TimeOut>800</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\Antutu\Antutu.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>Total</CheckItem>
+<CheckItem>Multitask</CheckItem>
+<CheckItem>Runtime</CheckItem>
+<CheckItem>RAM Operation</CheckItem>
+<CheckItem>RAM Speed</CheckItem>
+<CheckItem>CPU integer</CheckItem>
+<CheckItem>CPU float-point</CheckItem>
+<CheckItem>CPU integer(single)</CheckItem>
+<CheckItem>CPU float-point(single)</CheckItem>
+<CheckItem>2D graphics</CheckItem>
+<CheckItem>3D graphics</CheckItem>
+<CheckItem>Storage I/O</CheckItem>
+<CheckItem>Database I/O</CheckItem>
+</CheckPoints>
+</Antutu>
+<Caffeinemark>
+<TimeOut>400</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\Caffeinemark\Caffeinemark.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>Overall Score</CheckItem>
+<CheckItem>Sieve</CheckItem>
+<CheckItem>Loop</CheckItem>
+<CheckItem>Logic</CheckItem>
+<CheckItem>String</CheckItem>
+<CheckItem>Float</CheckItem>
+<CheckItem>Method</CheckItem>
+</CheckPoints>
+</Caffeinemark>
+<oxbench>
+<TimeOut>400</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\0xbench\0xbench.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>Linpack 1T</CheckItem>
+<CheckItem>Linpack 2T</CheckItem>
+<CheckItem>Linpack 4T</CheckItem>
+</CheckPoints>
+</oxbench>
+<AndEBench>
+<TimeOut>400</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\AndEBench\AndEBench.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>Native 4T</CheckItem>
+<CheckItem>Java 4T</CheckItem>
+</CheckPoints>
+</AndEBench>
+<AndroBench>
+<TimeOut>450</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\AndroBench\AndroBench.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>Sequential Read</CheckItem>
+<CheckItem>Sequential Write</CheckItem>
+<CheckItem>Random Read</CheckItem>
+<CheckItem>Random Write</CheckItem>
+<CheckItem>SQLite Insert</CheckItem>
+<CheckItem>SQLite Update</CheckItem>
+<CheckItem>SQLite Delete</CheckItem>
+<CheckItem>Browser</CheckItem>
+<CheckItem>Market</CheckItem>
+<CheckItem>Camera</CheckItem>
+<CheckItem>Camcorder</CheckItem>
+</CheckPoints>
+</AndroBench>
+<NenaMarkOne>
+<TimeOut>400</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\NenaMarkOne\NenaMarkOne.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>FPS</CheckItem>
+</CheckPoints>
+</NenaMarkOne>
+<Pi>
+<TimeOut>500</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\Pi\Pi.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>10,000,000</CheckItem>
+</CheckPoints>
+</Pi>
+<Monjori>
+<TimeOut>300</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\Monjori\Monjori.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>FPS</CheckItem>
+</CheckPoints>
+</Monjori>
+<EzBench_arm>
+<TimeOut>400</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\EzBench_arm\EzBench_arm.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>Memory I/O</CheckItem>
+<CheckItem>File Reading</CheckItem>
+<CheckItem>File Writing</CheckItem>
+<CheckItem>Encryption</CheckItem>
+<CheckItem>Decryption</CheckItem>
+<CheckItem>Hashing</CheckItem>
+<CheckItem>Mandelbrot Set</CheckItem>
+<CheckItem>Financial Modeling</CheckItem>
+<CheckItem>ezBench points</CheckItem>
+</CheckPoints>
+</EzBench_arm>
+<NenaMarkTwo>
+<TimeOut>400</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\NenaMarkTwo\NenaMarkTwo.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>FPS</CheckItem>
+</CheckPoints>
+</NenaMarkTwo>
+<QuakeIII>
+<TimeOut>400</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\QuakeIII\QuakeIII.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>FPS</CheckItem>
+</CheckPoints>
+</QuakeIII>
+<ThreeDmark>
+<TimeOut>1500</TimeOut>
+<TestTimes>3</TestTimes>
+<SleepSeconds>300</SleepSeconds>
+<QscriptPath>.\3Dmark\3Dmark.qs</QscriptPath>
+<CheckPoints>
+<CheckItem>IceStorm: Score</CheckItem>
+<CheckItem>IceStorm: Graphics score</CheckItem>
+<CheckItem>IceStorm: Physics score</CheckItem>
+<CheckItem>IceStorm: Graphics test 1</CheckItem>
+<CheckItem>IceStorm: Graphics test 2</CheckItem>
+<CheckItem>IceStorm: Physics test</CheckItem>
+<CheckItem>IceStormExtreme: Score</CheckItem>
+<CheckItem>IceStormExtreme: Graphics score</CheckItem>
+<CheckItem>IceStormExtreme: Physics score</CheckItem>
+<CheckItem>IceStormExtreme: Graphics test 1</CheckItem>
+<CheckItem>IceStormExtreme: Graphics test 2</CheckItem>
+<CheckItem>IceStormExtreme: Physics test</CheckItem>
+<CheckItem>IceStormUnlimited: Score</CheckItem>
+<CheckItem>IceStormUnlimited: Graphics score</CheckItem>
+<CheckItem>IceStormUnlimited: Physics score</CheckItem>
+<CheckItem>IceStormUnlimited: Graphics test 1</CheckItem>
+<CheckItem>IceStormUnlimited: Graphics test 2</CheckItem>
+<CheckItem>IceStormUnlimited: Physics test</CheckItem>
+</CheckPoints>
+</ThreeDmark>
+</PerformanceTest>

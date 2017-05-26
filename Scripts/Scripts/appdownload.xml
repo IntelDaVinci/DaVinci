@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<DaVinci>
+<Seed value="1"/>
+<Test type="EXPLORATORY" mode="OBJECT" download="YES" price="10.0" app="">
+<Action type="CLICK" value="100%">
+<Click type="PLAIN" value="100%"/>
+</Action>
+</Test>
+</DaVinci>
