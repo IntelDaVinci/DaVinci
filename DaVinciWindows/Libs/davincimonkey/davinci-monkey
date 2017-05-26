@@ -1,0 +1,9 @@
+# Script to start "monkey" on the device, which has a very rudimentary
+# shell.
+#
+base=/system
+mkdir /data/local/tmp/dalvik-cache
+export ANDROID_DATA=/data/local/tmp
+export CLASSPATH=/data/local/tmp/davinci-monkey.jar
+trap "" HUP
+exec app_process $base/bin com.android.commands.monkey.Monkey $*

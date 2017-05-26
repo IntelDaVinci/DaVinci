@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE1DB033-B0A3-4212-9F5F-9B7B911AE4CF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DaVinci</RootNamespace>
+    <AssemblyName>DaVinci</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\DaVinciLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\bin\Debug\DaVinci.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\bin\Release\DaVinci.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigureForm.Designer.cs">
+      <DependentUpon>ConfigureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizedProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedProgressBar.Designer.cs">
+      <DependentUpon>CustomizedProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPSTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPSTestForm.Designer.cs">
+      <DependentUpon>FPSTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTestSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTestSelect.Designer.cs">
+      <DependentUpon>CreateTestSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaVinciAPI.cs" />
+    <Compile Include="DaVinciCommon.cs" />
+    <Compile Include="DaVinciConfig.cs" />
+    <Compile Include="GetRnRWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetRnRWizard.Designer.cs">
+      <DependentUpon>GetRnRWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageBox.Designer.cs">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputNameForm.Designer.cs">
+      <DependentUpon>InputNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="launchTimeTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="launchTimeTestForm.Designer.cs">
+      <DependentUpon>launchTimeTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow_V.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow_V.Designer.cs">
+      <DependentUpon>MainWindow_V.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PushDataConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PushDataConfigure.Designer.cs">
+      <DependentUpon>PushDataConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QScriptConfigureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QScriptConfigureForm.Designer.cs">
+      <DependentUpon>QScriptConfigureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QScriptEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QScriptEditor.Designer.cs">
+      <DependentUpon>QScriptEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QScriptImageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QScriptImageBox.Designer.cs">
+      <DependentUpon>QScriptImageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RnRTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RnRTestForm.Designer.cs">
+      <DependentUpon>RnRTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetTextForm.Designer.cs">
+      <DependentUpon>SetTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestProjectConfig.cs" />
+    <Compile Include="TestProjectWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestProjectWizard.Designer.cs">
+      <DependentUpon>TestProjectWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestUtil.cs" />
+    <Compile Include="TiltForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiltForm.Designer.cs">
+      <DependentUpon>TiltForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimeStampFileReader.cs" />
+    <Compile Include="TouchImageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TouchImageBox.Designer.cs">
+      <DependentUpon>TouchImageBox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigureForm.resx">
+      <DependentUpon>ConfigureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPSTestForm.resx">
+      <DependentUpon>FPSTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTestSelect.resx">
+      <DependentUpon>CreateTestSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetRnRWizard.resx">
+      <DependentUpon>GetRnRWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageBox.resx">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="ImageViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageViewer.Designer.cs">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ImageViewer.resx">
+      <DependentUpon>ImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InputNameForm.resx">
+      <DependentUpon>InputNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="launchTimeTestForm.resx">
+      <DependentUpon>launchTimeTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow_V.resx">
+      <DependentUpon>MainWindow_V.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PushDataConfigure.resx">
+      <DependentUpon>PushDataConfigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QScriptConfigureForm.resx">
+      <DependentUpon>QScriptConfigureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QScriptEditor.resx">
+      <DependentUpon>QScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RnRTestForm.resx">
+      <DependentUpon>RnRTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetTextForm.resx">
+      <DependentUpon>SetTextForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestProjectWizard.resx">
+      <DependentUpon>TestProjectWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiltForm.resx">
+      <DependentUpon>TiltForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="examples\ffrd\ffrdcheck.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="examples\exploratory_test\bias_exploratory.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\exploratory_test\bias_smoke.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\ffrd\lifter.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\ffrd\lotus.apk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="examples\ffrd\powerpusherlongpress.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="examples\ffrd\powerpushershortpress.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="examples\ffrd\tilting.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="examples\ffrd\usb.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="examples\templerun\TempleRunHOGSVM.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="examples\templerun\TempleRunSVM_WithTilt.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="LogSettings.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="LogSettingsDebug.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="platform-tools\agent">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="platform-tools\start_agent_K900.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="platform-tools\start_agent_MT788.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="platform-tools\start_agent_network.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="platform-tools\start_agent_PR.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="platform-tools\start_agent_root.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="examples\ffrd\lock.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="examples\ffrd\lotus.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="examples\ffrd\power_off.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="examples\ffrd\power_on.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="examples\templerun\TempleRunSVM.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\templerun\TempleRunSVM_WithTilt.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\templerun\templerun_back.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\templerun\templerun_next.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\templerun\templerun_play_resume.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\templerun\templerun_play_run_again.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="examples\templerun\templerun_play_start.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\QAgent\QAgent.apk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\RnR\RnR.apk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\annotations-12.0.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\annotations.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\chimpchat.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\common.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\commons-codec-1.4.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\commons-compress-1.8.1.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\commons-logging-1.1.1.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\ddmlib.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\ddmuilib.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\dvlib.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\gson-2.2.4.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\guava-17.0.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\hierarchyviewer2lib.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincimonkey\4.2\davinci-monkey.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincimonkey\4.3\davinci-monkey.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincimonkey\4.4\davinci-monkey.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincimonkey\5.0\davinci-monkey.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincimonkey\5.1\davinci-monkey.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincimonkey\6.0\davinci-monkey.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincimonkey\davinci-monkey">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\httpclient-4.1.1.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\httpcore-4.1.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\httpmime-4.1.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\jcommon-1.0.12.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\jfreechart-1.0.9.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\jfreechart-swt-1.0.9.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\jsilver-1.0.0.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\jython-standalone-2.5.3.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\kxml2-2.3.0.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\layoutlib-api.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\monkeyrunner.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\org-eclipse-core-commands-3.6.0.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\org-eclipse-equinox-common-3.6.0.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\org-eclipse-jface-3.6.2.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\osgi-4.0.0.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\sdklib.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libs\davincirunner\x86\swt.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="platform-tools\aapt.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="platform-tools\adb.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="platform-tools\AdbWinApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="platform-tools\AdbWinUsbApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="platform-tools\adb_for_MT788.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\beforetrain.png" />
+    <Content Include="Resources\bias_connect_qs.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\BrightnessDown.png" />
+    <None Include="Resources\BrightnessUp.png" />
+    <Content Include="Resources\button_pause.png" />
+    <Content Include="Resources\button_play.png" />
+    <None Include="Resources\camera.png" />
+    <Content Include="Resources\check.png" />
+    <None Include="Resources\ClearLog.png" />
+    <None Include="Resources\DaVinci-Logo.jpg" />
+    <Content Include="Resources\DaVinciLogo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\downarrow.png" />
+    <Content Include="Resources\dumpUiLayout.png" />
+    <Content Include="Resources\edit.png" />
+    <None Include="Resources\folder.png" />
+    <Content Include="Resources\launchScreen.jpg" />
+    <Content Include="Resources\leftarrow.png" />
+    <Content Include="Resources\leftdownarrow.png" />
+    <Content Include="Resources\leftuparrow.png" />
+    <Content Include="Resources\lightup.png" />
+    <Content Include="Resources\lotus.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\microphone.png" />
+    <Content Include="Resources\microphone_inuse.png" />
+    <Content Include="Resources\new_folder.png" />
+    <Content Include="Resources\new_project.png" />
+    <Content Include="Resources\open_project.png" />
+    <Content Include="Resources\play.png" />
+    <Content Include="Resources\power.png" />
+    <Content Include="Resources\refresh.png" />
+    <None Include="Resources\Report.png" />
+    <Content Include="Resources\Report\banner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Report\index.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Report\index.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Report\jquery-1.11.2.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Report\logo.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Report\result.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Report\result.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\reset.png" />
+    <Content Include="Resources\rightarrow.png" />
+    <Content Include="Resources\rightdownarrow.png" />
+    <Content Include="Resources\rightuparrow.png" />
+    <Content Include="Resources\save.png" />
+    <Content Include="Resources\stop.png" />
+    <Content Include="Resources\train.png" />
+    <Content Include="Resources\uparrow.png" />
+    <Content Include="Resources\volumedown.png" />
+    <Content Include="Resources\volumeup.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Debug (
+    copy $(SolutionDir)Libs\OpenCV\bin\x64\vc110\*249d.dll $(TargetDir)
+    copy $(SolutionDir)Libs\OpenCV\bin\x64\vc110\*249d.pdb $(TargetDir)
+    copy $(SolutionDir)Libs\Boost\bin\x64\vc110\*-gd-1_56.dll $(TargetDir)
+    copy $(SolutionDir)Libs\Tesseract\bin\x64\vc110\*_d.dll $(TargetDir)
+    copy $(SolutionDir)Libs\RuntimeLibrary\bin\x64\vc110\*.dll $(TargetDir)
+    copy $(SolutionDir)Libs\OpenAL\bin\x64\vc110\OpenAL32_d.dll $(TargetDir)OpenAL32.dll
+    copy $(SolutionDir)Libs\OpenAL\bin\x64\vc110\OpenAL32_d.pdb $(TargetDir)OpenAL32.pdb
+) else (
+    copy $(SolutionDir)Libs\OpenCV\bin\x64\vc110\*249.dll $(TargetDir)
+    copy $(SolutionDir)Libs\OpenCV\bin\x64\vc110\*249.pdb $(TargetDir)
+    copy $(SolutionDir)Libs\Boost\bin\x64\vc110\*-mt-1_56.dll $(TargetDir)
+    copy $(SolutionDir)Libs\Tesseract\bin\x64\vc110\*168.dll $(TargetDir)
+    copy $(SolutionDir)Libs\Tesseract\bin\x64\vc110\*302.dll $(TargetDir)
+    copy $(SolutionDir)Libs\OpenAL\bin\x64\vc110\OpenAL32.dll $(TargetDir)
+    copy $(SolutionDir)Libs\OpenAL\bin\x64\vc110\OpenAL32.pdb $(TargetDir)
+)
+
+copy $(SolutionDir)Libs\LibSndfile\bin\x64\vc110\*.dll $(TargetDir)
+copy $(SolutionDir)Libs\OpenCV\bin\x64\vc110\cu*.dll $(TargetDir)
+copy $(SolutionDir)Libs\OpenCV\bin\x64\vc110\np*.dll $(TargetDir)
+copy $(SolutionDir)Libs\OpenCV\data\*.xml $(TargetDir)
+copy $(SolutionDir)Libs\HyperSoftCam\bin\x64\vc110\*.dll $(TargetDir)
+copy $(ProjectDir)..\DaVinciLib\DeviceControl\MAgent.py $(TargetDir)
+
+mkdir $(TargetDir)TesseractData
+xcopy $(SolutionDir)Libs\Tesseract\data\* $(TargetDir)TesseractData\ /Y /R /Q /S
+mkdir $(TargetDir)Caffedata
+xcopy $(SolutionDir)Libs\Caffe\data\Caffedata\* $(TargetDir)\Caffedata /Y /R /Q /S
+mkdir $(TargetDir)RstData
+xcopy $(SolutionDir)Libs\Caffe\data\RstData\* $(TargetDir)RstData  /Y /R /Q /S
+mkdir $(TargetDir)ObjectData
+xcopy $(SolutionDir)Libs\Caffe\data\ObjectData\* $(TargetDir)ObjectData  /Y /R /Q /S
+
+copy $(SolutionDir)Libs\Caffe\bin\x64\vc110\* $(TargetDir) /Y
+
+copy $(SolutionDir)DaVinciLib\DaVinci_Keyword.xml $(TargetDir) /Y
+copy $(SolutionDir)DaVinciLib\DaVinci_Applist.xml $(TargetDir) /Y</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
